@@ -17,7 +17,7 @@
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" [routerLink]="['/']">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Special offers</a>
@@ -56,8 +56,8 @@
         <div class="d-flex align-items-center" >
             <input type="image"
                    src="../../assets/cart.svg"
-                   height="40px"
-                   width="40px"
+                   height="30px"
+                   width="30px"
                    alt="cart"
             />
 
@@ -65,12 +65,12 @@
             <!-- Login dropdown -->
             <div class="m-4">
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/login.jpg" height="70" width="70"/></a>
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/login.jpg" height="50" width="50"/></a>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <button href="#" class="dropdown-item" [disabled]="!loggedIn">My profile</button>
-                        <button href="#" class="dropdown-item">Log in</button>
-                        <button href="#" class="dropdown-item">Sign up</button>
-                        <button href="#" class="dropdown-item" [disabled]="!loggedIn">Log out</button>
+                        <button *ngIf="loggedIn;" href="#" class="dropdown-item" [routerLink]="['/profile']">My profile</button>
+                        <button *ngIf="!loggedIn;" href="#" class="dropdown-item" [routerLink]="['/login']">Log in</button>
+                        <button *ngIf="!loggedIn;" href="#" class="dropdown-item" [routerLink]="['/signup']">Sign up</button>
+                        <button *ngIf="loggedIn;" href="#" class="dropdown-item" [routerLink]="['/logout']">Log out</button>
                     </div>
                 </div>
             </div>
