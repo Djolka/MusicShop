@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
 	selector: 'app-navigation',
@@ -8,9 +9,10 @@ import { UserService } from '../services/user.service';
 })
 export class NavigationComponent implements OnInit{
 
-	public loggedIn: boolean
+	public loggedIn: boolean = false
 
-	constructor (private userService: UserService) {}
+	constructor (private userService: UserService) {
+	}
 
 	ngOnInit(): void {}
 }

@@ -28,11 +28,10 @@ export class UserService extends HttpErrorHandler {
 			...formData
 		}
 		
-
 		this.user = this.http.post<User>('http://localhost:3000/signup/', body)
 					.pipe(catchError(super.handleError()))
 		
-		console.log(this.loggedIn)
+		// console.log(this.loggedIn)
 		return this.user
 	}
 
@@ -54,4 +53,9 @@ export class UserService extends HttpErrorHandler {
 	public logOut () { // logout -> delete all infos from 'user'
 
 	}
+
+	public getUser(): Observable<User> {
+		return this.user
+	}
+	
 }

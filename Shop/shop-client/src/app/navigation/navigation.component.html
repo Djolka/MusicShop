@@ -54,7 +54,8 @@
 
         <!-- Favorites icon -->
         <div class="d-flex align-items-center" >
-            <input type="image"
+            <input [routerLink]="['/favourites']"
+                   type="image"
                    src="../../assets/favourite.png"
                    height="30px"
                    width="30px"
@@ -64,7 +65,8 @@
 
         <!-- Cart icon -->
         <div class="d-flex align-items-center" >
-            <input type="image"
+            <input [routerLink]="['/order']"
+                   type="image"
                    src="../../assets/cart.svg"
                    height="30px"
                    width="30px"
