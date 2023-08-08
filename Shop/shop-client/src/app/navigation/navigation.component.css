@@ -8,12 +8,11 @@
 }
 
 .d-flex {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left:20px;
+    padding-right:20px;
 }
 
 #title {
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
 }
-
