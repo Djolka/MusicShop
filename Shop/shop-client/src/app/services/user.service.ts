@@ -31,7 +31,6 @@ export class UserService extends HttpErrorHandler {
 		this.user = this.http.post<User>('http://localhost:3000/signup/', body)
 					.pipe(catchError(super.handleError()))
 		
-		// console.log(this.loggedIn)
 		return this.user
 	}
 

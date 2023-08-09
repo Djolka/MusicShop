@@ -10,13 +10,17 @@ const productSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    desctiption: {
+    description: {
         type: String,
         required: true
     },
-    noOfString: {
-        type: Number, 
-        required: false
+    type: {
+        type: String,
+        required: true
+    },
+    color: {
+        type: String,
+        required: true
     },
     manufacturer: {
         type: String,
@@ -26,10 +30,10 @@ const productSchema = mongoose.Schema({
         type: String,
         required: false
     },
-    // picture: {
-        // type: ... ,
-        // required: true,
-    // },    
+    picture: {
+        type: String ,
+        required: true,
+    }
 });
 
 module.exports = mongoose.model('Product', productSchema);

@@ -1,0 +1,262 @@
+[
+    {
+        "name": "Harley Benton CG-45 NS",
+        "price": 60,
+        "description": "Affordable begginer guitar, made out of mahogany, both neck and body. Has warm sound.",
+        "type": "acoustic",
+        "color": "Natural matte",
+        "manufacturer": "Harley Benton",
+        "countryOfOrigin": "Germany",
+        "picture": "../../assets/HarleyBentonCG-45Front.jpg"
+    },
+    {
+        "name": "Fender FA-135 Concert WN Sunb B-Stock",
+        "price": 96,
+        "description": "Neck and fretboard made out of Walnut, 20 frats and single layer black pickguard.",
+        "type": "acoustic",
+        "color": "Sunburst",
+        "manufacturer": "Fender",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/FenderFA-135ConcertWNSunb.png"
+    },
+    {
+        "name": "Fender FA-135 Concert All-Mahogany WN",
+        "price": 111,
+        "description": "Beautifully made Fender with Walnut neck and freatboard and Mahodany top. ",
+        "type": "acoustic",
+        "color": "Natural",
+        "manufacturer": "Fender",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/FenderFA-135ConcertAll-Mahogany.jpg"
+    },
+    {
+        "name": "Yamaha F310 NT",
+        "price": 111,
+        "description": "Rosewood freatboard with nut width of 43 mm and chrome machine heads.",
+        "type": "acoustic",
+        "color": "Natural",
+        "manufacturer": "Yamaha",
+        "countryOfOrigin": "Japan",
+        "picture": "../../assets/YamahaF310NT.jpg" 
+    },
+    {
+        "name": "Cort AF510 Black Satin",
+        "price": 120,
+        "description": "20 frets guitar with mahogany back, sides and neck. Great for intermediate players.",
+        "type": "acoustic",
+        "color": "Black Satin",
+        "manufacturer": "Cort",
+        "countryOfOrigin": "South Korea",
+        "picture": "../../assets/CortAF510BlackSatin.jpg"
+    },
+    {
+        "name": "Ibanez VC50NJP-NT",
+        "price": 139,
+        "description": "Concert-acoustic guitar, spruce top, Agathis back and sides, mahogany neck, Jatoba-fretboard, 648 mm scale length.",
+        "type": "acoustic",
+        "color": "Natural",
+        "manufacturer": "Ibanez",
+        "countryOfOrigin": "Japan",
+        "picture": "../../assets/IbanezVC50NJP.jpg"
+    },
+    {
+        "name": "Chapman Guitars ML3 Modern Deep Red Satin",
+        "price": 508,
+        "description": "Chapman ML3 Modern Deep Red Satin, electric guitar, basswood body, ash veneer top, maple neck, Macassar ebony.",
+        "type": "electric",
+        "color": "Red Satin",
+        "manufacturer": "Chapman Guitars",
+        "countryOfOrigin": "Great Britain",
+        "picture": "../../assets/ChapmanGuitarsDeepRedSatin.jpg"
+    },
+    {
+        "name": "Ibanez AZES31 Vermilion",
+        "price": 249,
+        "description": "Reliable Hardtail Bridge. High quality hardware and construction throughout. Built with the beginner in mind",
+        "type": "electric",
+        "color": "Vermilion",
+        "manufacturer": "Ibanez",
+        "countryOfOrigin": "Japan",
+        "picture": "../../assets/IbanezVermilion.png"
+    },
+    {
+        "name": "Player Stratocaster",
+        "price": 849,
+        "description": "2-point tremolo bridge. 22-fret neck. 4-Bolt Standard." ,
+        "type": "electric",
+        "color": "Polar White",
+        "manufacturer": "Fender",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/playerStratocaster.jpg"
+    },
+    {
+        "name": "Gibson Les Paul Tribute SHB",
+        "price": 1099,
+        "description": "Rosewood fretboard with tektoid nut and rounded neck profile.",
+        "type": "electric",
+        "color": "Satin Honey Burst",
+        "manufacturer": "Gibson",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/GibsonLesPaulTribute.jpg"
+    },
+    {
+        "name": "Marcus Miller V3 TS 2nd Gen",
+        "price": 315,
+        "description": "Mahogany body with maple neck and rosewood fretboard.",
+        "type": "bass",
+        "color": "Tobacco Sunburst",
+        "manufacturer": "Marcus Miller",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/MarcusMillerV3TS2ndGen.jpg"
+    },
+    {
+        "name": "Fender MIJ LTD Hybrid II J-Bass Noir",
+        "price": 1199,
+        "description": "3-Way switch. 4-Saddle vintage-style bridge. Vintage-style machine heads.",
+        "type": "bass",
+        "color": "Satin Black",
+        "manufacturer": "Fender",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/FenderMIJLTDJ-BassNoir.jpg"
+    },
+    {
+        "name": "Fender Vintera 60s Jazz Bass 3-SB",
+        "price": 969,
+        "description": "Vintera series. Pau Ferro Fretboard. 20 Vintage frets.",
+        "type": "bass",
+        "color": "3-Colour Sunburst",
+        "manufacturer": "Fender",
+        "countryOfOrigin": "USA",
+        "picture": "../../assets/Fender60sJazzBass3-SB.jpg"
+    },
+    {
+        "name": "Cort GB34 JJ BK",
+        "price": 242,
+        "description": "Poplar body. Bolted maple neck. Jatoba fretboard",
+        "type": "bass",
+        "color": "Black",
+        "manufacturer": "Cort ",
+        "countryOfOrigin": "South Korea",
+        "picture": "../../assets/CortGB34JJBK.jpg"
+    },
+    {
+        "name": "Veston KUS100 Sunburst Ukulele Soprano",
+        "price": 30,
+        "description": "Great choice for all children and beginners who can easily handle this instrument.",
+        "type": "ukulele_soprano",
+        "color": "Sunburst",
+        "manufacturer": "Veston",
+        "countryOfOrigin": "China",
+        "picture": "../../assets/VestonUkuleleSoprano.jpg"
+    },
+    {
+        "name": "Flight NUS200 Teak Soprano Ukulele",
+        "price": 42,
+        "description": "Made from laminate Indonesian teak, offering great punch, volume, and tone.",
+        "type": "ukulele_soprano",
+        "color": "Natural",
+        "manufacturer": "Flight",
+        "countryOfOrigin": "Slovenia",
+        "picture": "../../assets/FlightNUS200TeakSopranoUkulele.jpg"
+    },
+    {
+        "name": "Flight NUS380 Topaz Soprano Ukulele",
+        "price": 71,
+        "description": "The laminate sapele wood brings out the percussive punch of a soprano ukulele.",
+        "type": "ukulele_soprano",
+        "color": "Blue",
+        "manufacturer": "Flight",
+        "countryOfOrigin": "Slovenia",
+        "picture": "../../assets/FlightNUS380TopazSopranoUkulele.jpg"
+    },
+    {
+        "name": "Flight DUS460 Amara Soprano Ukulele",
+        "price": 126,
+        "description": "Premium soprano ukulele made from Amara wood.",
+        "type": "ukulele_soprano",
+        "color": "Natural",
+        "manufacturer": "Flight",
+        "countryOfOrigin": "Slovenia",
+        "picture": "../../assets/FlightDUS460AmaraSopranoUkulele.jpg"
+    },
+    {
+        "name": "Flight DUC380 Jade Concert Ukulele",
+        "price": 89,
+        "description": "Breathe musical life into your atmosphere with the Flight DUC380 Jade Concert Ukulele",
+        "type": "ukulele_concert",
+        "color": "Green",
+        "manufacturer": "Flight",
+        "countryOfOrigin": "Slovenia",
+        "picture": "../../assets/FlightDUC380JadeConcertUkulele.jpg"
+    },
+    {
+        "name": "Veston KUC100 RD Ukulele Concert",
+        "price": 32,
+        "description": "Great choice for all ages, for beginners and experienced players",
+        "type": "ukulele_concert",
+        "color": "Red",
+        "manufacturer": "Veston ",
+        "countryOfOrigin": "China",
+        "picture": "../../assets/VestonKUC100RDUkuleleConcert.jpg"
+    },
+    {
+        "name": "aNueNue AKK2 Hawaiian Koa Concert Ukulele",
+        "price": 995,
+        "description": "Made of all solid Hawaiian Koa, this instrument has a warm yet bright tone",
+        "type": "ukulele_concert",
+        "color": "Natural",
+        "manufacturer": "aNueNue",
+        "countryOfOrigin": "China",
+        "picture": "../../assets/aNueNueAKK2HawaiianKoaUkulele.jpg"
+    },
+    {
+        "name": "aNueNue Moon Bird UC200E Concert Electro-Acoustic Ukulele",
+        "price": 1630,
+        "description": "Moon Spruce as a top, and Indian Rosewood forms the back and sides.",
+        "type": "ukulele_concert",
+        "color": "Natural",
+        "manufacturer": "aNueNue",
+        "countryOfOrigin": "China",
+        "picture": "../../assets/aNueNueMoonBirdUC200E.jpg"
+    },
+    {
+        "name": "Mahalo MJ3 Tenor Ukulele Vintage Natural",
+        "price": 62,
+        "description": "You´ll be amazed at the quality and performance of the Mahalo Java Series",
+        "type": "ukulele_tenor",
+        "color": "Natural",
+        "manufacturer": "Mahalo",
+        "countryOfOrigin": "China",
+        "picture": "../../assets/MahaloMJ3TenorUkuleleVintageNatural.jpg"
+    },
+    {
+        "name": "Uma UK-04T Acacia Koa Tenor Ukulele",
+        "price": 136,
+        "description": "Great ukulele for intermediate and advanced players.",
+        "type": "ukulele_tenor",
+        "color": "Natural",
+        "manufacturer": "Uma ",
+        "countryOfOrigin": "Taiwan",
+        "picture": "../../assets/UmaUK-04TTenor Ukulele.jpg"
+    },
+    {
+        "name": "Flight Victoria EQ-A Tenor Ukulele",
+        "price": 259,
+        "description": "The combination of the solid top spruce and resonant acacia back and sides.",
+        "type": "ukulele_tenor",
+        "color": "Natural",
+        "manufacturer": "Flight ",
+        "countryOfOrigin": "Slovenia",
+        "picture": "../../assets/FlightVictoriaEQ-ATenorUkulele.jpg"
+    },
+    {
+        "name": "aNueNue Bird UT 5KE Tenor Electro-Acoustic Ukulele",
+        "price": 3119,
+        "description": "Made of all solid Hawaiian Koa",
+        "type": "ukulele_tenor",
+        "color": "Natural",
+        "manufacturer": "aNueNue ",
+        "countryOfOrigin": "China",
+        "picture": "../../assets/aNueNueUT5KETenorElectro-AcousticUkulele.jpg"
+    }
+]

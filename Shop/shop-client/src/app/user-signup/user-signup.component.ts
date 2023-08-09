@@ -15,7 +15,7 @@ export class UserSignupComponent implements OnInit{
 
 	private user: User
 	public checkoutForm: FormGroup
-	// public loggedIn: boolean
+	public loggedIn: boolean = false
 
 	constructor (private userService: UserService,
 				 private formBuilder: FormBuilder,

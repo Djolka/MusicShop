@@ -9,9 +9,9 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { ProductInfoComponent } from './product-info/product-info.component'
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { HomeComponent } from './home/home.component'
     UserLoginComponent,
     UserSignupComponent,
     UserProfileComponent,
-    SidebarMenuComponent,
     CarouselComponent,
-    HomeComponent
+    HomeComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,
