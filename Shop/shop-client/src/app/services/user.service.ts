@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpErrorHandler } from './http-error-handler.model';
-import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
+import { Observable, Subject, catchError} from 'rxjs';
 import { User } from '../models/user.model'
 
 
@@ -13,11 +13,28 @@ import { User } from '../models/user.model'
 export class UserService extends HttpErrorHandler {
 
 	private user: Observable<User>
-	public loggedIn: boolean = false
+
+	public loggedIn: boolean
+	loggedInChange : Subject<boolean> = new Subject<boolean>()
 
     constructor(private http: HttpClient, router: Router) {
     	super(router)
+		// this.loggedInChange.subscribe((value) => {
+		// 	this.loggedIn = value
+		// })
     }
+
+	changeLoggedInInfo() {
+        this.loggedIn = !this.loggedIn
+        this.loggedInChange.next(this.loggedIn);
+    }
+	getLoggedValue(): Observable<boolean> {
+        return this.loggedInChange.asObservable();
+    }
+
+
+
+
 
 	public getCurrentUserInfo (): Observable<User> {
 		return this.user

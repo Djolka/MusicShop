@@ -23,7 +23,7 @@ export class ProductInfoComponent {
 
 				this.productService
 					.getProductById(pId)
-					.subscribe((product: Product) => this.product = product) // TOFIX
+					.subscribe((product: Product) => this.product = product) 
     	})
 	}
 }

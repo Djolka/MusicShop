@@ -25,8 +25,10 @@ export class UserLoginComponent  implements OnInit {
 		})
 	}
 
-	ngOnInit(): void {
-		
+	ngOnInit(): void {}
+
+	changeLoggedInfo() {
+		this.userService.changeLoggedInInfo()
 	}
 
 	public email() {
@@ -37,6 +39,7 @@ export class UserLoginComponent  implements OnInit {
 		return this.checkoutForm.get('password')
 	}
 
+	// TOFIX: handling error 
 	public submitForm(data: any) {
 		this.userService.getUserByEmailAndPassword(data)
 		  	.subscribe((user: User) => {
@@ -49,7 +52,6 @@ export class UserLoginComponent  implements OnInit {
 				this.router.navigate(['/'])
 		  	},
 			  (error: any) => {
-				// Handle the error here
 				Swal.fire(
 				  'Error',
 				  'Invalid email or password. Please try again.',

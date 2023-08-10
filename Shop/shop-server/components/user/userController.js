@@ -5,7 +5,7 @@ const User = require('./userModel');
 module.exports.loginUser = async function (req, res, next) {
     try {
         const user = await User.findOne({email: req.body.email, password: req.body.password});
-        // console.log(user)
+
         if(user) {
             res.status(200).json(user)
         } else { 
@@ -22,7 +22,6 @@ module.exports.signUpUser = async function (req, res, next) {
         name: req.body.name,
         lastName: req.body.lastName,
         password: req.body.password,
-        // picture: req.body.picture, 
         address: req.body.address,
         country: req.body.country,
         phoneNumber: req.body.phoneNumber,

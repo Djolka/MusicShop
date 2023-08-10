@@ -28,6 +28,10 @@ export class UserSignupComponent implements OnInit{
 		})
 	}
 
+	sendLoggedInfo() {
+		this.userService.changeLoggedInInfo()
+	}
+
 	ngOnInit(): void {}
 
 	public name() {
@@ -57,5 +61,6 @@ export class UserSignupComponent implements OnInit{
 				this.checkoutForm.reset()
 				this.router.navigate(['/'])
 		  	})
+		this.sendLoggedInfo()
 	}
 }
