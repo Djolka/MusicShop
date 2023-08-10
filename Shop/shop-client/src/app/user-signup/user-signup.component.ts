@@ -12,8 +12,8 @@ import Swal from 'sweetalert2';
 	styleUrls: ['./user-signup.component.css']
 })
 export class UserSignupComponent implements OnInit{
-
-	private user: User
+	
+	public user: User
 	public checkoutForm: FormGroup
 	public loggedIn: boolean = false
 
@@ -26,29 +26,20 @@ export class UserSignupComponent implements OnInit{
 			email: ['', [Validators.required, Validators.email]],
 			password: ['', [Validators.required]]
 		})
+		this.user = new User()
+	}
+
+
+	updateUserInfo(data: User) {
+		this.user = data
 	}
 
 	sendLoggedInfo() {
 		this.userService.changeLoggedInInfo()
+		this.userService.changeUserInfo(this.user)
 	}
 
 	ngOnInit(): void {}
-
-	public name() {
-		return this.checkoutForm.get('name')
-	}
-
-	public lastName() {
-		return this.checkoutForm.get('lastName')
-	}
-
-	public email() {
-		return this.checkoutForm.get('email')
-	}
-
-	public password() {
-		return this.checkoutForm.get('password')
-	}
 
 	public submitForm(data: any) {
 		this.userService.addUser(data)
@@ -61,6 +52,7 @@ export class UserSignupComponent implements OnInit{
 				this.checkoutForm.reset()
 				this.router.navigate(['/'])
 		  	})
+		this.updateUserInfo(data)
 		this.sendLoggedInfo()
 	}
 }

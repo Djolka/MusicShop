@@ -64,30 +64,30 @@ module.exports.deleteUserById = async function (req, res, next) {
     }
 };
 
+module.exports.updateUser = async function (req, res, next) {
+    try {
+        await User.updateOne({_id: req.params.id}, {$set: req.body}).exec()
+        const user = await User.findById({_id: req.params.id}).exec() 
 
-// module.exports.getAnOrderById = async function (req, res, next) {
-//   const orderId = req.params.orderId;
+        res.status(200).json(user)
+    } catch (err) {
+        next(err);
+    }
+};
 
-//   try {
-//     const order = await Order.findById(orderId).populate('products').exec();
-//     if (!order) {
-//       return res
-//         .status(404)
-//         .json({ message: 'The order with given id does not exist' });
-//     }
-//     res.status(200).json(order);
-//   } catch (err) {
-//     next(err);
-//   }
-// };
+//za proveru
+module.exports.getUserById = async function (req, res, next) {
+    const userId = req.params.id;
 
-// module.exports.deleteAnOrderById = async function (req, res, next) {
-//   const orderId = req.params.orderId;
-
-//   try {
-//     await Order.deleteOne({ _id: orderId }).exec();
-//     res.status(200).json({ message: 'The order is successfully deleted' });
-//   } catch (err) {
-//     next(err);
-//   }
-// };
+    try {
+        const user = await User.findById(userId).exec()
+        if (!user) {
+        return res
+            .status(404)
+            .json({ message: 'The user does not exist' });
+        }
+        res.status(200).json(user);
+    } catch (err) {
+        next(err);
+    }
+};

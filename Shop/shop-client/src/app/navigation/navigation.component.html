@@ -82,7 +82,7 @@
                     <button *ngIf="loggedIn;" class="dropdown-item" [routerLink]="['/profile']">My profile</button>
                     <button *ngIf="!loggedIn;" class="dropdown-item" [routerLink]="['/login']">Log in</button>
                     <button *ngIf="!loggedIn;" class="dropdown-item" [routerLink]="['/signup']">Sign up</button>
-                    <button *ngIf="loggedIn;" class="dropdown-item" (click)="changeLoggedInfo()" [routerLink]="['/']">Log out</button>
+                    <button *ngIf="loggedIn;" class="dropdown-item" (click)="changeLoggedInfo();" [routerLink]="['/']">Log out</button>
                 </div>
             </div>
         </div>
