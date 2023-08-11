@@ -29,16 +29,6 @@ export class UserSignupComponent implements OnInit{
 		this.user = new User()
 	}
 
-
-	updateUserInfo(data: User) {
-		this.user = data
-	}
-
-	sendLoggedInfo() {
-		this.userService.changeLoggedInInfo()
-		this.userService.changeUserInfo(this.user)
-	}
-
 	ngOnInit(): void {}
 
 	public submitForm(data: any) {
@@ -50,9 +40,9 @@ export class UserSignupComponent implements OnInit{
 					'success'
 				  )
 				this.checkoutForm.reset()
+				this.userService.addUserLocalStorage(user)
+				this.loggedIn = true
 				this.router.navigate(['/'])
 		  	})
-		this.updateUserInfo(data)
-		this.sendLoggedInfo()
 	}
 }

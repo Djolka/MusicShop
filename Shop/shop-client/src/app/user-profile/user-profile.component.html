@@ -11,14 +11,14 @@
                             <h4 class="text-right">Profile Settings</h4>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">First Name</label><input formControlName="name" value="{{ user.name }}" type="text" class="form-control" placeholder="first name"></div>
-                            <div class="col-md-6"><label class="labels">Last Name</label><input formControlName="lastName" value="{{ user.lastName }}" type="text" class="form-control" value="" placeholder="last name"></div>
+                            <div class="col-md-6"><label class="labels">First Name</label><input id="name" formControlName="name" value="{{ user.name  }}" type="text" class="form-control" placeholder="first name"></div>
+                            <div class="col-md-6"><label class="labels">Last Name</label><input id="lastName" formControlName="lastName" value="{{ user.lastName }}" type="text" class="form-control" value="" placeholder="last name"></div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Phone Number</label><input formControlName="phoneNumber" value="{{ user.phoneNumber }}" type="text" class="form-control" placeholder="enter phone number"></div>
                             <div class="col-md-12"><label class="labels">Address</label><input formControlName="address" value="{{ user.address }}" type="text" class="form-control" placeholder="enter address"></div>
                             <div class="col-md-12"><label class="labels">Country</label><input formControlName="country" value="{{ user.country }}" type="text" class="form-control" placeholder="enter country"></div>
-                            <div class="col-md-12"><label class="labels">Email</label><input disabled="true" value="{{ user.email}}" type="email" class="form-control" placeholder="enter email"></div>
+                            <div class="col-md-12"><label class="labels">Email</label><input id="email" disabled="true" value="{{ user.email}}" type="email" class="form-control" placeholder="enter email"></div>
                         </div>
                         <div class="mt-5 text-center">
                             <button type="submit" class="btn btn-primary">Update Profile</button>

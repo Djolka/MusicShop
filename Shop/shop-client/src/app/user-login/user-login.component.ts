@@ -4,7 +4,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { throwError, catchError } from 'rxjs';
 
 @Component({
   selector: 'app-user-login',
@@ -27,19 +26,6 @@ export class UserLoginComponent  implements OnInit {
 
 	ngOnInit(): void {}
 
-	changeLoggedInfo() {
-		this.userService.changeLoggedInInfo()
-	}
-
-	public email() {
-		return this.checkoutForm.get('email')
-	}
-
-	public password() {
-		return this.checkoutForm.get('password')
-	}
-
-	// TOFIX: handling error 
 	public submitForm(data: any) {
 		this.userService.getUserByEmailAndPassword(data)
 		  	.subscribe((user: User) => {
@@ -49,14 +35,17 @@ export class UserLoginComponent  implements OnInit {
 					'success'
 				)
 				this.checkoutForm.reset()
+				this.userService.addUserLocalStorage(user)
 				this.router.navigate(['/'])
 		  	},
 			  (error: any) => {
-				Swal.fire(
-				  'Error',
-				  'Invalid email or password. Please try again.',
-				  'error'
-				);
+				if(error.status === 404) {
+					Swal.fire(
+						'Error',
+						'Invalid email or password. Please try again.',
+						'error'
+					);
+				}		
 			  }
 			)
 	}

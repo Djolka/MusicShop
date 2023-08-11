@@ -32,21 +32,23 @@ module.exports.getProductById = async function (req, res, next) {
 
 module.exports.loadProducts = async function (req, res, next) {
 
-    const product = new Product({
-        _id: new mongoose.Types.ObjectId(),
-        name: req.body.name,
-        price: req.body.price,
-        description: req.body.description,
-        type: req.body.type,
-        color: req.body.color,
-        manufacturer: req.body.manufacturer,
-        countryOfOrigin: req.body.countryOfOrigin,
-        picture: req.body.picture,
-    });
+    // const product = new Product({
+    //     _id: new mongoose.Types.ObjectId(),
+    //     name: req.body.name,
+    //     price: req.body.price,
+    //     description: req.body.description,
+    //     type: req.body.type,
+    //     color: req.body.color,
+    //     manufacturer: req.body.manufacturer,
+    //     countryOfOrigin: req.body.countryOfOrigin,
+    //     picture: req.body.picture,
+    // });
 
     try {
-        const savedProduct = await product.save();
-        res.status(201).json(savedProduct);
+        // const savedProduct = await product.save();
+        // res.status(201).json(savedProduct);
+        await Product.insertMany(req.body)
+        res.status(200).send()
     } catch (err) {
         next(err);
     }

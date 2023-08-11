@@ -5,7 +5,6 @@ import { User } from '../models/user.model';
 import Swal from 'sweetalert2';
 import { Subscription } from 'rxjs';
 import { countries } from "countries-list";
-import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,7 +20,6 @@ export class UserProfileComponent {
 
 	constructor(private userService: UserService,
 				private formBuilder: FormBuilder,
-				private route: ActivatedRoute,
 				private router: Router) {
 		this.refreshUser()
 		this.checkoutForm = this.formBuilder.group({
@@ -33,16 +31,16 @@ export class UserProfileComponent {
 			phoneNumber: [this.user.phoneNumber, []],
 			address: [this.user.address, []]
 		})
-		console.log(this.user)
   	}
 
 	refreshUser() {
-		this.user = this.userService.getUserInfo()
+		this.userService.getUserById().subscribe((user:User) => {
+			this.user = user
+		})
 	}
 
-
 	public submitForm(data: any) {
-		console.log(data)
+		data = Object.fromEntries(Object.entries(data).filter(([_, v]) => v != null))
 		this.userService.updateUser(data)
 			.subscribe((user: User) => {
 				Swal.fire(

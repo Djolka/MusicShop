@@ -1,30 +1,34 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
-import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-navigation',
 	templateUrl: './navigation.component.html',
 	styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnInit, OnDestroy{
 
-	public loggedIn: boolean
-	subscription: Subscription
+export class NavigationComponent implements OnInit{
 
-	constructor (private userService: UserService) {
-		this.subscription = this.userService.getLoggedValue().subscribe((value) => {
-			this.loggedIn = value
+	public loggedIn: boolean = false
+
+	constructor (private userService: UserService,
+				 private router: Router) {
+		if(this.userService.get_id() === undefined) {
+
+			this.loggedIn = true
+		}
+	}
+
+	public logout() {
+		this.loggedIn = false
+		this.userService.logOut()
+		this.router.navigate(['/'])
+	}
+
+	ngOnInit(): void {
+		this.userService.log.subscribe(login => {
+			this.loggedIn = login
 		})
 	}
-
-	changeLoggedInfo() {
-		this.userService.changeLoggedInInfo()
-	}
-
-	ngOnDestroy() {
-        this.subscription.unsubscribe();
-    }
-
-	ngOnInit(): void {}
 }

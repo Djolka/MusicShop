@@ -77,12 +77,12 @@
         <!-- Login dropdown -->
         <div class="m-4">
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/login.jpg" height="50" width="50"/></a>
+                <a class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/login.jpg" height="50" width="50"/></a>
                 <div class="dropdown-menu dropdown-menu-end">
                     <button *ngIf="loggedIn;" class="dropdown-item" [routerLink]="['/profile']">My profile</button>
                     <button *ngIf="!loggedIn;" class="dropdown-item" [routerLink]="['/login']">Log in</button>
                     <button *ngIf="!loggedIn;" class="dropdown-item" [routerLink]="['/signup']">Sign up</button>
-                    <button *ngIf="loggedIn;" class="dropdown-item" (click)="changeLoggedInfo();" [routerLink]="['/']">Log out</button>
+                    <button *ngIf="loggedIn;" class="dropdown-item" (click)="logout();" [routerLink]="['/']">Log out</button>
                 </div>
             </div>
         </div>

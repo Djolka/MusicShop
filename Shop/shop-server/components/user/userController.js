@@ -9,7 +9,8 @@ module.exports.loginUser = async function (req, res, next) {
         if(user) {
             res.status(200).json(user)
         } else { 
-            res.status(404).send()
+            console.log(user)
+            res.status(404).send({})
         }
     } catch (err) {
         next(err);
