@@ -1,1 +1,84 @@
+<!-- content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row gx-5">
+            <aside class="col-lg-6">
+                <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                    <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image"
+                        href="{{ product.picture }}">
+                        <img style="width: 600px; height: 650px; margin: auto;" class="rounded-4 fit"
+                            src="{{ product.picture }}" />
+                    </a>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <a *ngFor="let prPic of product.picture" data-fslightbox="mygalley" class="border mx-1 rounded-2"
+                        target="_blank" data-type="image" href="{{ prPic }}" class="item-thumb">
+                        <img src="{{ prPic }}" width="60" height="60" class="rounded-2" />
+                    </a>
+                </div>
 
+            </aside>
+            <main class="col-lg-6">
+                <div class="ps-lg-3">
+                    <h4 class="title text-dark">
+                        {{ product.name }}
+                    </h4>
+
+                    <div class="mb-3 h5">
+                        <span>{{ product.price | currency: 'EUR'}}</span><span
+                            style="font-size: medium; font-weight: bold;"> · </span><span class="text-success">In
+                            stock</span>
+                    </div>
+                    <p>
+                        {{ product.description }}
+                    </p>
+
+                    <div class="row">
+                        <dt class="col-3">Type:</dt>
+                        <dd class="col-9">
+                            <div [ngSwitch]="product.type">
+                                <div *ngSwitchCase="'acoustic'">Acoustic guitar</div>
+                                <div *ngSwitchCase="'electric'">Electric guitar</div>
+                                <div *ngSwitchCase="'bass'">Bass guitar</div>
+                            </div>
+                        </dd>
+
+                        <dt class="col-3">Color:</dt>
+                        <dd class="col-9">{{ product. color }}</dd>
+
+                        <dt class="col-3">Manufacturer:</dt>
+                        <dd class="col-9">{{ product.manufacturer }}</dd>
+
+                        <dt class="col-3">Country of origin:</dt>
+                        <dd class="col-9">{{ product.countryOfOrigin}}</dd>
+                    </div>
+
+                    <hr />
+
+                    <div class="row mb-4">
+                        <!-- col.// -->
+                        <div class="col-md-4 col-4">
+                            <label class="mb-2 d-block">Quantity:</label>
+                            <div class="input-group" style="width: 140px;">
+                                <button class="btn btn-dark border border-secondary px-3" type="button" id="button-dec"
+                                    (click)="decQuantity()" [disabled]="quantityNumber === 1"
+                                    data-mdb-ripple-color="dark">
+                                    <span class="minus">-</span>
+                                </button>
+                                <input type="text" [(ngModel)]="quantityNumber"
+                                    class="form-control text-center border border-secondary" />
+                                <button class="btn btn-dark border border-secondary px-3" type="button" id="button-inc"
+                                    (click)="incQuantity()" data-mdb-ripple-color="dark">
+                                    <span class="plus">+</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg" (click)="addToCart()" style="width:140px; margin-right:15px">Add to cart</button>
+                    <button type="button" class="btn btn-dark btn-lg" style="margin-left:15px">Add to wishlist</button>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+<!-- content -->

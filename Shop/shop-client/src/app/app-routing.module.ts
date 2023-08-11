@@ -6,6 +6,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { HomeComponent } from './home/home.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { CartComponent } from './cart/cart.component';
 
 // http://localhost:4200/
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
 	{path: 'login', component: UserLoginComponent},
 	{path: 'signup', component: UserSignupComponent},
 	{path: 'profile', component: UserProfileComponent},
-	// {path: 'logout', component: UserLogoutComponent},
+	{path: 'cart', component: CartComponent}
 ];
 
 @NgModule({

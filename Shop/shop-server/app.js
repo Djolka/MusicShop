@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // const indexAPIRoutes = require('./components/index/indexAPI');
 const userRoutes = require('./components/user/userAPI');
 const productRoutes = require('./components/product/productsAPI');
-// const orderRoutes = require('./components/orders/ordersAPI');
+const orderRoutes = require('./components/order/orderAPI');
 
 
 const app = express();
@@ -45,7 +45,7 @@ app.use(function (req, res, next) {
 // app.use('/', indexAPIRoutes);
 app.use('/', userRoutes);
 app.use('/', productRoutes);
-// app.use('/orders', orderRoutes);
+app.use('/', orderRoutes);
 
 
 

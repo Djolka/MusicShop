@@ -1,4 +1,4 @@
-export interface Product {
+export class Product {
     _id: string;
     name: string;
     price: number;
@@ -7,5 +7,5 @@ export interface Product {
     color: string;
     manufacturer: string;
     countryOfOrigin: string;
-    picture: string;
+    picture: [string];
 }
