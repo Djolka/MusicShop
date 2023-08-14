@@ -7,10 +7,12 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { HomeComponent } from './home/home.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { CartComponent } from './cart/cart.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 
 // http://localhost:4200/
 const routes: Routes = [
 	{path: '', component: HomeComponent},
+	{path: 'favourites', component: FavouritesComponent},
 	{path: 'product/:id', component: ProductInfoComponent},
 	{path: 'login', component: UserLoginComponent},
 	{path: 'signup', component: UserSignupComponent},

@@ -54,15 +54,15 @@
 
         <!-- Favorites icon -->
         <div class="d-flex align-items-center" >
-            <input [routerLink]="['/favourites']"
+            <input *ngIf="favSize===0;else notEmptyFav" [routerLink]="['/favourites']"
                    type="image"
                    src="../../assets/favourite.png"
                    height="30px"
                    width="30px"
                    alt="favorite"
             />
-            <!-- <ng-template #notEmpty>
-                <input *ngIf="itemsSize===0;else notEmpty" [routerLink]="['/favourites']"
+            <ng-template #notEmptyFav>
+                <input [routerLink]="['/favourites']"
                 type="image"
                 src="../../assets/favourite-full.png"
                 height="30px"
@@ -70,9 +70,9 @@
                 alt="favorite"
                 />  
                 <span class="position-relative translate-middle badge bg-danger">
-                    {{ itemsSize }}
+                    {{ favSize }}
                 </span>
-            </ng-template> -->
+            </ng-template>
         </div>
 
         <!-- Cart icon -->

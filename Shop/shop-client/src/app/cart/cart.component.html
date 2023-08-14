@@ -1,4 +1,4 @@
-<div class="cart_section d-flex align-items-center justify-content-center px-5 ms-xl-4 mt-5 pt-5">
+<div class="cart_section d-flex align-items-center justify-content-center px-5  mt-5 pt-5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 offset-lg-1">
@@ -22,8 +22,14 @@
                                         <div class="cart_item_title">Price</div>
                                         <div class="cart_item_text">{{ item.price * item.quantity | currency: 'EUR'}}</div>
                                     </div>
-                                    <div class="cart_item_color cart_info_col align-items-center">
-                                        <button type="button" (click)="removeItem(item.name)" class="btn btn-danger">REMOVE</button>
+                                    <!-- <div class="cart_item_color cart_info_col mt-5">
+                                        <button type="button" (click)="removeItem(item._id)" class="btn btn-danger btn-sm rounded-pill py-1 px-2">REMOVE</button>
+                                    </div> -->
+                                    <!-- <button type="button" class="btn btn-lg" (click)="removeItem(item._id)">
+                                        <span>x</span>
+                                    </button> -->
+                                    <div class="mt-5">
+                                        <button (click)="removeItem(item._id)" class="btn custom-button">x</button>
                                     </div>
                                 </div>
                             </li>
@@ -38,9 +44,44 @@
                     <div class="cart_buttons">
                         <button type="button" [routerLink]="['/']" class="button cart_button_clear">Continue Shopping</button>
                         <button type="button" (click)="clearCart()" class="button cart_button_clear">Clear cart</button>
-                        <button *ngIf="totalPrice>0" type="button" class="button cart_button_checkout" disabled="true">Buy</button> 
+                        <button *ngIf="totalPrice>0" type="button" class="button cart_button_checkout">Buy</button> 
                     </div>
                 </div>
+            </div>
+            <div class="text-black col-lg-5">
+                <form [formGroup]="checkoutForm" style="width: 23rem;margin-left: 200px;">
+                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Your informations:</h3>
+        
+                    <div class="form-outline mb-4">
+                        <label id="name" class="form-label" for="name">Name:</label>
+                        <input type="text" value="{{ user.name }}" id="name" class="form-control form-control-lg" formControlName="name" placeholder=" name"/>
+                    </div>
+                    
+                    <div class="form-outline mb-4">
+                        <label id="lastName" class="form-label" for="lastName">Last name:</label>
+                        <input type="text" value="{{ user.lastName }}" id="lastName" class="form-control form-control-lg" formControlName="lastName" placeholder=" last name"/>
+                    </div>
+        
+                    <div class="form-outline mb-4">
+                        <label id="phoneNumber" class="form-label" for="phoneNumber">Phone number:</label>
+                        <input type="text" value="{{ user.phoneNumber }}" id="phoneNumber" class="form-control form-control-lg" formControlName="phoneNumber" placeholder=" phone number" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label id="address" class="form-label" for="address">Address:</label>
+                        <input type="text" value="{{ user.address }}" id="address" class="form-control form-control-lg" formControlName="address" placeholder=" address" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label id="country" class="form-label" for="country">Country:</label>
+                        <input type="text" value="{{ user.country }}" id="country" class="form-control form-control-lg" formControlName="country" placeholder=" country"/>
+                    </div>
+        
+                    <div class="form-outline mb-4">
+                        <label id="email" class="form-label" for="email">Email address:</label>
+                        <input type="email" value="{{ user.email }}" id="email" class="form-control form-control-lg" formControlName="email" placeholder=" email"/>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -4,6 +4,7 @@ import { Product } from '../models/product.model';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../services/cart.service';
+import { FavouritesService } from '../services/favourites.service';
 
 @Component({
 	selector: 'app-product-info',
@@ -14,10 +15,12 @@ export class ProductInfoComponent {
 	
 	public product: Product = new Product()
 	private paramsMapSub: Subscription
+	public quantity: number = 1
 
   	constructor (private productService: ProductService,
-				 private route: ActivatedRoute,
-				 private cartService: CartService) {
+				 private cartService: CartService,
+				 private favouritesService: FavouritesService,
+				 private route: ActivatedRoute) {
 		this.route.paramMap.subscribe(params => { 
 			const pId = params.get('id')
 
@@ -28,16 +31,28 @@ export class ProductInfoComponent {
 	}
 
 	public decQuantity() {
-		this.product.quantity -= 1
+		this.quantity -= 1
 	}
 
 	public incQuantity() {
-		this.product.quantity += 1
+		this.quantity += 1
 	}
 
 	public addToCart() {
+		this.product.quantity = this.quantity
+		this.quantity = 1
 		this.cartService.addToCart(this.product)
 	}
 
+	public addToFavList() {
+		this.favouritesService.addToFavList(this.product)
+	}
 
+	public removeFromFavList() {
+		this.favouritesService.removeFromFavList(this.product._id)
+	}
+
+	public isInFavlist() {
+		return this.favouritesService.isInFavList(this.product)
+	}
 }

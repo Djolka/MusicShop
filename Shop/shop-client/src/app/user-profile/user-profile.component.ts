@@ -25,7 +25,7 @@ export class UserProfileComponent {
 		this.checkoutForm = this.formBuilder.group({
 			name: [this.user.name, [Validators.required]],
 			lastName: [this.user.lastName, [Validators.required]],
-			email: [this.user.email, [Validators.required, Validators.email]],
+			email: [this.user.email, []],
 			password: [this.user.password, []],
 			country: [this.user.country, []],
 			phoneNumber: [this.user.phoneNumber, []],

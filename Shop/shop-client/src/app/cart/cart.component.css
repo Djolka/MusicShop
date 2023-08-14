@@ -89,7 +89,8 @@ ul {
 }
 
 .cart_item_name {
-    margin-left: 7.53%
+    margin-left: 7.53%;
+    width: 350px
 }
 
 .cart_item_title {
@@ -190,3 +191,15 @@ ul {
     vertical-align: top
 }
 
+.custom-button {
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

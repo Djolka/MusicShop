@@ -51,8 +51,8 @@ export class CartService extends HttpErrorHandler {
 		return sum
 	}
 
-	public removeItem(itemName:string):void {
-		this.items = this.items.filter((item) => item.name!==itemName)
+	public removeItem(id:string):void {
+		this.items = this.items.filter((item) => item._id !== id)
 		this.itemsSize.emit(this.items.length)
 	}
 

@@ -11,8 +11,8 @@
                             <h4 class="text-right">Profile Settings</h4>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">First Name</label><input id="name" formControlName="name" value="{{ user.name  }}" type="text" class="form-control" placeholder="first name"></div>
-                            <div class="col-md-6"><label class="labels">Last Name</label><input id="lastName" formControlName="lastName" value="{{ user.lastName }}" type="text" class="form-control" value="" placeholder="last name"></div>
+                            <div class="col-md-6"><label class="labels">First Name</label><input id="name" disabled="true" value="{{ user.name }}" type="text" class="form-control" placeholder="first name"></div>
+                            <div class="col-md-6"><label class="labels">Last Name</label><input id="lastName" disabled="true" value="{{ user.lastName }}" type="text" class="form-control" value="" placeholder="last name"></div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Phone Number</label><input formControlName="phoneNumber" value="{{ user.phoneNumber }}" type="text" class="form-control" placeholder="enter phone number"></div>
