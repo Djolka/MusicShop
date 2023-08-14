@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
 	selector: 'app-navigation',
@@ -11,11 +12,12 @@ import { Router } from '@angular/router';
 export class NavigationComponent implements OnInit{
 
 	public loggedIn: boolean = false
+	public itemsSize: number = 0
 
 	constructor (private userService: UserService,
+				 private cartService: CartService,		 
 				 private router: Router) {
 		if(this.userService.get_id() === undefined) {
-
 			this.loggedIn = true
 		}
 	}
@@ -30,5 +32,8 @@ export class NavigationComponent implements OnInit{
 		this.userService.log.subscribe(login => {
 			this.loggedIn = login
 		})
+		this.cartService.itemsSize.subscribe(size => {
+			this.itemsSize = size
+		}) 
 	}
 }

@@ -61,19 +61,43 @@
                    width="30px"
                    alt="favorite"
             />
+            <!-- <ng-template #notEmpty>
+                <input *ngIf="itemsSize===0;else notEmpty" [routerLink]="['/favourites']"
+                type="image"
+                src="../../assets/favourite-full.png"
+                height="30px"
+                width="30px"
+                alt="favorite"
+                />  
+                <span class="position-relative translate-middle badge bg-danger">
+                    {{ itemsSize }}
+                </span>
+            </ng-template> -->
         </div>
 
         <!-- Cart icon -->
         <div class="d-flex align-items-center" >
-            <input [routerLink]="['/cart']"
+            <input *ngIf="itemsSize===0; else notEmpty" [routerLink]="['/cart']"
                    type="image"
                    src="../../assets/cart.svg"
                    height="30px"
                    width="30px"
                    alt="cart"
             />
-
+            <ng-template #notEmpty>
+                <input [routerLink]="['/cart']"
+                   type="image"
+                   src="../../assets/cart-full.png"
+                   height="30px"
+                   width="30px"
+                   alt="cart"
+                />
+                <span class="position-relative translate-middle badge bg-danger">
+                    {{ itemsSize }}
+                </span>
+            </ng-template>
         </div>
+
         <!-- Login dropdown -->
         <div class="m-4">
             <div class="dropdown">

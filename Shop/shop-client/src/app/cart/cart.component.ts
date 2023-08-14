@@ -23,4 +23,10 @@ export class CartComponent {
 		this.items = this.cartService.getitems()
 		this.totalPrice = this.cartService.getTotalPrice()
 	}
+
+	public clearCart() {
+		this.items = []
+		this.totalPrice = 0
+		this.cartService.clearCart()
+	}
 }

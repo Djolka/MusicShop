@@ -61,11 +61,11 @@
                             <label class="mb-2 d-block">Quantity:</label>
                             <div class="input-group" style="width: 140px;">
                                 <button class="btn btn-dark border border-secondary px-3" type="button" id="button-dec"
-                                    (click)="decQuantity()" [disabled]="quantityNumber === 1"
+                                    (click)="decQuantity()" [disabled]="product.quantity === 1"
                                     data-mdb-ripple-color="dark">
                                     <span class="minus">-</span>
                                 </button>
-                                <input type="text" [(ngModel)]="quantityNumber"
+                                <input type="text" [(ngModel)]="product.quantity"
                                     class="form-control text-center border border-secondary" />
                                 <button class="btn btn-dark border border-secondary px-3" type="button" id="button-inc"
                                     (click)="incQuantity()" data-mdb-ripple-color="dark">

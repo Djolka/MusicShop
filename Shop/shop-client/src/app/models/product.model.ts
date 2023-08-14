@@ -8,4 +8,5 @@ export class Product {
     manufacturer: string;
     countryOfOrigin: string;
     picture: [string];
+    quantity: number;
 }

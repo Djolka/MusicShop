@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpErrorHandler } from './http-error-handler.model';
-import { Observable, Subject, Subscription, catchError} from 'rxjs';
+import { Observable, catchError} from 'rxjs';
 import { User } from '../models/user.model'
 
 

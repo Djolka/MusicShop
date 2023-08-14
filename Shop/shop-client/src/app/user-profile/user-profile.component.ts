@@ -45,7 +45,7 @@ export class UserProfileComponent {
 			.subscribe((user: User) => {
 				Swal.fire(
 					'Successfully updated your informations',
-					'We are happy to see you :)!',
+					'Enjoy shopping!',
 					'success'
 				)
 			})

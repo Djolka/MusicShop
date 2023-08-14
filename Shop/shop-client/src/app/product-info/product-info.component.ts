@@ -13,7 +13,6 @@ import { CartService } from '../services/cart.service';
 export class ProductInfoComponent {
 	
 	public product: Product = new Product()
-	public quantityNumber: number = 1
 	private paramsMapSub: Subscription
 
   	constructor (private productService: ProductService,
@@ -29,15 +28,15 @@ export class ProductInfoComponent {
 	}
 
 	public decQuantity() {
-		this.quantityNumber -= 1
+		this.product.quantity -= 1
 	}
 
 	public incQuantity() {
-		this.quantityNumber += 1
+		this.product.quantity += 1
 	}
 
 	public addToCart() {
-		this.cartService.addToCart(this.product, this.quantityNumber)
+		this.cartService.addToCart(this.product)
 	}
 
 
