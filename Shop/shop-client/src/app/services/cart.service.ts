@@ -61,14 +61,4 @@ export class CartService extends HttpErrorHandler {
 		this.itemsSize.emit(this.items.length)
 		return this.items
 	}
-
-	// public createAnOrder(formData: any): Observable<Order> { // kada kreiramo porudzbinu, vraca se informacija o toj porudzbini
-	// 	const body = {
-	// 		...formData,
-	// 		products: this.items
-	// 	};
-	// 	return this.http.post<Order>(this.ordersUrl, body).pipe(
-	// 		catchError(super.handleError())
-	// 	); 
-	// }
 }

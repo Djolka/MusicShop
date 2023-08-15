@@ -17,6 +17,8 @@ export class UserService extends HttpErrorHandler {
 	public userInfo: User
 	private user: Observable<User>
 
+	private usersURL = 'http://localhost:3000/users/'
+
     constructor(private http: HttpClient, router: Router) {
     	super(router)
     }
@@ -36,7 +38,7 @@ export class UserService extends HttpErrorHandler {
 			...formData
 		}
 		
-		this.user = this.http.post<User>('http://localhost:3000/signup/', body)
+		this.user = this.http.post<User>(this.usersURL + 'signup/', body)
 					.pipe(catchError(super.handleError()))
 		
 		return this.user
@@ -46,7 +48,7 @@ export class UserService extends HttpErrorHandler {
 		const body = {
 			...formData
 		}
-		this.user = this.http.post<User>('http://localhost:3000/login/', body)
+		this.user = this.http.post<User>(this.usersURL + 'login/', body)
 		return this.user
 	}
 
@@ -54,13 +56,13 @@ export class UserService extends HttpErrorHandler {
 		const body = {
 			...formData
 		}
-		this.user = this.http.put<User>('http://localhost:3000/users/' + this.get_id(), body)
+		this.user = this.http.put<User>(this.usersURL + 'update/' + this.get_id(), body)
 						
 		return this.user
 	}
 
 	public getUserById(): Observable<User> {
-		return this.http.get<User>('http://localhost:3000/users/' + this.get_id())
+		return this.http.get<User>(this.usersURL + 'user/' + this.get_id())
 	}
 
 	public logOut () { 

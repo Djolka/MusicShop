@@ -6,7 +6,7 @@ export class User {
     email: string;
     address: string;
     country: string;
-    phoneNumber: number;
+    phoneNumber: string;
     // picture: {
     // type: ... ,
     // required: false,

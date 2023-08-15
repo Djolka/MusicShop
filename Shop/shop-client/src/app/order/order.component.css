@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+	text-shadow: rgba(0, 0, 0, .01) 0 0 1px
+}
+
+ul {
+	list-style: none;
+	margin-bottom: 0px
+}
+
+.cart_list {
+	border: solid 1px #e8e8e8;
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	margin-top: 10px;
+}
+
+.cart_item {
+	width: 100%;
+	padding: 15px;
+	padding-right: 46px
+}
+
+.widget-49 .widget-49-title-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #edf1fc;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-day {
+	color: #4e73e5;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-month {
+	color: #4e73e5;
+	line-height: 1;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+}
+
+.widget-49 .widget-49-title-wrapper .widget-49-meeting-info .widget-49-meeting-time {
+	color: #B1BAC5;
+	font-size: 13px;
+}
+
+.widget-49 .widget-49-meeting-points {
+	font-weight: 400;
+	font-size: 13px;
+	margin-top: .5rem;
+	margin-left: 50px;
+}
+
+.widget-49 .widget-49-meeting-points .widget-49-meeting-item {
+	color: #727686;
+}
+
+.widget-49 .widget-49-meeting-action {
+	text-align: right;
+}
+
+.widget-49 .widget-49-meeting-action a {
+	text-transform: uppercase;
+}

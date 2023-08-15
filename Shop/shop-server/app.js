@@ -43,9 +43,9 @@ app.use(function (req, res, next) {
 
 // Routing rules
 // app.use('/', indexAPIRoutes);
-app.use('/', userRoutes);
-app.use('/', productRoutes);
-app.use('/', orderRoutes);
+app.use('/users', userRoutes);
+app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
 
 
 

@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { CartComponent } from './cart/cart.component';
 import { FavouritesComponent } from './favourites/favourites.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FavouritesComponent } from './favourites/favourites.component';
     HomeComponent,
     ProductInfoComponent,
     CartComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

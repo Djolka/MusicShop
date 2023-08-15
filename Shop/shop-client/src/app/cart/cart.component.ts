@@ -4,6 +4,8 @@ import { Product } from '../models/product.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { User } from '../models/user.model';
+import { OrderService } from '../services/order.service';
+import Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-cart',
@@ -19,17 +21,15 @@ export class CartComponent {
 
 	constructor (private cartService: CartService,
 				 private userService: UserService,
+				 private orderService: OrderService,
 				 private formBuilder: FormBuilder) {
 		this.refreshUser()
 		this.items = this.cartService.getitems()
 		this.totalPrice = this.cartService.getTotalPrice()
 		this.checkoutForm = this.formBuilder.group({
-			name: [this.user.name, [Validators.required]],
-			lastName: [this.user.lastName, [Validators.required]],
 			phoneNumber: [this.user.phoneNumber, [Validators.required]],
 			address: [this.user.address, [Validators.required]],
-			country: [this.user.country, [Validators.required]],
-			email: [this.user.email, [Validators.required, Validators.email]]
+			country: [this.user.country, [Validators.required]]
 		})
 	}
 
@@ -49,5 +49,19 @@ export class CartComponent {
 		this.items = []
 		this.totalPrice = 0
 		this.cartService.clearCart()
+	}
+
+	public addOrder() {
+		this.orderService.createAnOrder(this.totalPrice, this.items, this.userService.get_id()).subscribe(order => {
+			console.log(order)
+		})
+		this.cartService.clearCart()
+		this.items = []
+		this.totalPrice = 0
+		Swal.fire(
+			'You have successfully created an order',
+			'Enjoy playing :)',
+			'success'
+		)
 	}
 }

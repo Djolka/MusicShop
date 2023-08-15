@@ -2,46 +2,62 @@ const mongoose = require('mongoose');
 
 const Order = require('./orderModel');
 
-// module.exports.getOrders = async function (req, res, next) {
-//     try {
-//         const orders = await Order.find({}).exec();
-//         res.status(200).json(orders);
-//     } catch (err) {
-//         next(err);
-//     }
-// };
+module.exports.getOrders = async function (req, res, next) {
+    try {
+        const orders = await Order.find({}).populate('products').exec();
+        if(!orders) {
+            return res
+                    .status(404)
+                    .json({ message: 'The order with given id does not exist' });
+        }
+        res.status(200).json(orders);
+    } catch (err) {
+        next(err);
+    }
+};
 
-// module.exports.createAnOrder = async function (req, res, next) {
-//     const order = new Order({
-//         _id: new mongoose.Types.ObjectId(),
-//         products: req.body.products.map(p => p._id),
-//         name: req.body.name,
-//         address: req.body.address,
-//         email: req.body.email,
-//     });
-//     try {
-//         const savedObject = await order.save();
-//         res.status(201).json(savedObject);
-//     } catch (err) {
-//         next(err);
-//     }
-// };
+module.exports.createAnOrder = async function (req, res, next) {
+    const order = new Order({
+        _id: new mongoose.Types.ObjectId(),
+        customerId: req.body.customerId,
+        products: req.body.products,
+        totalPrice: req.body.totalPrice,
+        date: req.body.date
+    });
+    try {
+        const savedObject = await order.save();
+        res.status(201).json(savedObject);
+    } catch (err) {
+        next(err);
+    }
+};
 
-// module.exports.getAnOrderById = async function (req, res, next) {
-//     const orderId = req.params.orderId;
+module.exports.deleteAllOrders = async function (req, res, next) {
+    try {
+        await Order.deleteMany().exec();
 
-//     try {
-//         const order = await Order.findById(orderId).populate('products').exec();
-//         if (!order) {
-//             return res
-//                 .status(404)
-//                 .json({ message: 'The order with given id does not exist' });
-//         }
-//         res.status(200).json(order);
-//     } catch (err) {
-//         next(err);
-//     }
-// };
+        res.status(200).json({ message: 'The orders are successfully deleted'});
+    } catch (err) {
+        next(err);
+    }
+};
+
+module.exports.userOrders = async function (req, res, next) {
+    const userId = req.params.id;
+
+    try {
+        const orders = await Order.find({customerId: userId}).exec();
+        // console.log(orders)
+        if (!orders) {
+            return res
+                .status(404)
+                .json({});
+        }
+        res.status(200).json(orders);
+    } catch (err) {
+        next(err);
+    }
+};
 
 // module.exports.deleteAnOrderById = async function (req, res, next) {
 //     const orderId = req.params.orderId;

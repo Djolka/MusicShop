@@ -4,8 +4,7 @@ const router = express.Router();
 
 const controller = require('./productsController');
 
-router.get('/', controller.getProducts);
-router.post('/', controller.loadProducts);
+router.get('/productList', controller.getProducts);
 router.get('/:id', controller.getProductById)
 // router.post('/signup', controller.signUpUser);
 

@@ -102,10 +102,21 @@
             </ul>
         </div>
 
+
         <!-- Product list -->
         <section class="w-100" style="background-color: white;">
             <div class="text-center container py-5">
                 <div class="row">
+                    <select id="filter" style="width: 200px" class="mb-2" name="filter">
+                        <option selected hidden>Choose filter</option>
+                        <option value="priceLH">Price Low to High</option>
+                        <option value="priceHL">Price High to Low</option>
+                        <option value="nameAZ">Name A-Z</option>
+                        <option value="nameZA">Name Z-A</option>
+                        <option value="brandAZ">Brands A-Z</option>
+                        <option value="brandZA">Brands Z-A</option>
+                    </select>
+                    <hr width="50%"/>
                     <div *ngFor="let product of products | async" class="col-lg-3 mb-3">
                         <div [routerLink]="['/product', product._id]" class="card  h-100"> <!-- TODO: here fix card dimensions -->
                             <div style="cursor:pointer;" class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
