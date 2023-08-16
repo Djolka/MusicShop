@@ -34,6 +34,13 @@ export class NavigationComponent implements OnInit{
 	ngOnInit(): void {
 		this.userService.log.subscribe(login => {
 			this.loggedIn = login
+			if(this.loggedIn === false) {
+				this.favouritesService.clear()
+			} else {
+				this.favouritesService.getFavList(this.userService.get_id()).subscribe(items => {
+					this.favSize = items.length
+				})
+			}
 		})
 		this.cartService.itemsSize.subscribe(size => {
 			this.itemsSize = size

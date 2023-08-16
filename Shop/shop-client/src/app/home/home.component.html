@@ -107,7 +107,7 @@
         <section class="w-100" style="background-color: white;">
             <div class="text-center container py-5">
                 <div class="row">
-                    <select id="filter" style="width: 200px" class="mb-2" name="filter">
+                    <select id="filter" style="width: 200px" class="mb-2" name="filter" (change)="onChange($event)">
                         <option selected hidden>Choose filter</option>
                         <option value="priceLH">Price Low to High</option>
                         <option value="priceHL">Price High to Low</option>

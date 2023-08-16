@@ -6,13 +6,8 @@ const controller = require('./productsController');
 
 router.get('/productList', controller.getProducts);
 router.get('/:id', controller.getProductById)
-// router.post('/signup', controller.signUpUser);
+router.post('/insertMany', controller.insertProducts)
 
-
-router.delete('/', controller.deleteAllProducts)
-// router.delete('/users/:id', controller.deleteUserById)
-
-// router.get('/:orderId', controller.getAnOrderById);
-// router.delete('/:orderId', controller.deleteAnOrderById);
+router.delete('/deleteAll', controller.deleteAllProducts)
 
 module.exports = router;

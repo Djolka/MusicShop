@@ -44,7 +44,7 @@
                         </dd>
 
                         <dt class="col-3">Color:</dt>
-                        <dd class="col-9">{{ product. color }}</dd>
+                        <dd class="col-9">{{ product.color }}</dd>
 
                         <dt class="col-3">Manufacturer:</dt>
                         <dd class="col-9">{{ product.manufacturer }}</dd>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <button type="button" class="btn btn-primary btn-lg" (click)="addToCart()" style="width:140px; margin-right:15px">Add to cart</button>
-                    <button *ngIf="!isInFavlist();else InFavlist" type="button" class="btn btn-dark btn-lg" (click)="addToFavList()" style="margin-left:15px">Add to wishlist</button>
+                    <button *ngIf="!isInFav;else InFavlist" type="button" class="btn btn-dark btn-lg" (click)="addToFavList()" style="margin-left:15px" [disabled]="!loggedIn">Add to wishlist</button>
                     <ng-template #InFavlist>
                         <button type="button" class="btn btn-danger btn-lg" (click)="removeFromFavList()" style="margin-left:15px">Remove from wishlist</button>
                     </ng-template>

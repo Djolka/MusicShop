@@ -20,8 +20,8 @@ module.exports.getProductById = async function (req, res, next) {
         const product = await Product.findById(productId).exec()
         if (!product) {
             return res
-            .status(404)
-            .send()
+                .status(404)
+                .send()
         }
 
         res.status(200).json(product);
@@ -40,59 +40,11 @@ module.exports.deleteAllProducts = async function (req, res, next) {
     }
 };
 
-
-// module.exports.signUpUser = async function (req, res, next) {
-//     const user = new User({
-//         _id: new mongoose.Types.ObjectId(),
-//         name: req.body.name,
-//         lastName: req.body.lastName,
-//         password: req.body.password,
-//         // picture: req.body.picture, 
-//         address: req.body.address,
-//         country: req.body.country,
-//         phoneNumber: req.body.phoneNumber,
-//         email: req.body.email,
-//     });
-//     try {
-//         const savedUser = await user.save();
-//         res.status(201).json(savedUser);
-//     } catch (err) {
-//         next(err);
-//     }
-// };
-
-// module.exports.getUsers = async function (req, res, next) {
-//     try {
-//         const users = await User.find({});
-//         res.status(200).json(users);
-//     } catch (err) {
-//         next(err);
-//     }
-// };
-
-
-
-// module.exports.deleteUserById = async function (req, res, next) {
-//     const userId = req.params.id
-
-//     try {
-//         await User.deleteOne({_id: userId}).exec();
-//         res.status(200).json({message: 'User is successfully deleted'});
-//     } catch (err) {
-//         next(err);
-//     }
-// };
-
-
-
-
-// module.exports.deleteAnOrderById = async function (req, res, next) {
-//   const orderId = req.params.orderId;
-
-//   try {
-//     await Order.deleteOne({ _id: orderId }).exec();
-//     res.status(200).json({ message: 'The order is successfully deleted' });
-//   } catch (err) {
-//     next(err);
-//   }
-// };
+module.exports.insertProducts = async function (req, res, next) {
+    try {
+        await Product.insertMany(req.body)
+        res.status(200).send()
+    } catch (err) {
+        next(err);
+    }
+};

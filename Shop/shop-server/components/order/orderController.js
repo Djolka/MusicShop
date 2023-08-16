@@ -47,7 +47,6 @@ module.exports.userOrders = async function (req, res, next) {
 
     try {
         const orders = await Order.find({customerId: userId}).exec();
-        // console.log(orders)
         if (!orders) {
             return res
                 .status(404)
@@ -58,14 +57,3 @@ module.exports.userOrders = async function (req, res, next) {
         next(err);
     }
 };
-
-// module.exports.deleteAnOrderById = async function (req, res, next) {
-//     const orderId = req.params.orderId;
-
-//     try {
-//         await Order.deleteOne({ _id: orderId }).exec();
-//         res.status(200).json({ message: 'The order is successfully deleted' });
-//     } catch (err) {
-//         next(err);
-//     }
-// };

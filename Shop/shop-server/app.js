@@ -2,10 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-// const indexAPIRoutes = require('./components/index/indexAPI');
 const userRoutes = require('./components/user/userAPI');
 const productRoutes = require('./components/product/productsAPI');
 const orderRoutes = require('./components/order/orderAPI');
+const favouritesRoutes = require('./components/favourites/favouritesAPI');
 
 
 const app = express();
@@ -42,10 +42,10 @@ app.use(function (req, res, next) {
 });
 
 // Routing rules
-// app.use('/', indexAPIRoutes);
 app.use('/users', userRoutes);
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/favourites', favouritesRoutes)
 
 
 

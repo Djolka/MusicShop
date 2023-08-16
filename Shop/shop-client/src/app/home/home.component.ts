@@ -14,4 +14,33 @@ export class HomeComponent {
   	constructor (private productService: ProductService) {
 		this.products = this.productService.getProducts()
 	}
+
+	public onChange(event: any) {
+		switch(event.target.value) {
+			case 'priceLH':{
+				console.log('priceLH')
+				break
+			}
+			case 'priceHL':{
+				console.log('priceHL')
+				break
+			}
+			case 'nameAZ':{
+				console.log('nameAZ')
+				break
+			}
+			case 'nameZA':{
+				console.log('nameZA')
+				break
+			}
+			case 'brandAZ':{
+				console.log('brandAZ')
+				break
+			}
+			case 'brandZA':{
+				console.log('brandZA')
+				break
+			}
+		}
+	}
 }
