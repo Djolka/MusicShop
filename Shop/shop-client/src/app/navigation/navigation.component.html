@@ -15,7 +15,7 @@
                     <a class="nav-link" [routerLink]="['/']">Home</a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="nav-link hover-button" [routerLink]="['/orders']" [disabled]="!loggedIn" title="Log in to store your orders">My orders</button>
+                    <button *ngIf="loggedIn" type="button" class="nav-link hover-button" [routerLink]="['/orders']" title="Log in to store your orders">My orders</button>
                 </li>
             </ul>
             <!-- Left links -->
@@ -31,16 +31,14 @@
 
         <!-- Right elements -->
         <!-- Collapsible wrapper -->
-        <form class="d-flex input-group w-auto">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
-            <span class="input-group-text border-0" id="search-addon">
-                <i class="fas fa-search"></i>
-            </span>
-        </form>
-
+        <div class="d-flex input-group w-auto">
+            <input id="searchbar" onsearch="search()" onkeyup="search()" type="search" name="search" class="form-control rounded" placeholder="Search">
+            
+            <ul id="list-holder">
+            </ul>
+        </div>
         <!-- Favorites icon -->
-        <div class="d-flex align-items-center">
+        <div *ngIf="loggedIn" class="d-flex align-items-center">
             <input *ngIf="favSize===0;else notEmptyFav" [routerLink]="['/favourites']" type="image"
                 src="../../assets/favourite.png" height="30px" width="30px" alt="favorite" />
             <ng-template #notEmptyFav>
@@ -53,7 +51,7 @@
         </div>
 
         <!-- Cart icon -->
-        <div class="d-flex align-items-center">
+        <div *ngIf="loggedIn" class="d-flex align-items-center">
             <input *ngIf="itemsSize===0; else notEmpty" [routerLink]="['/cart']" type="image"
                 src="../../assets/cart.svg" height="30px" width="30px" alt="cart" />
             <ng-template #notEmpty>
@@ -68,7 +66,10 @@
         <!-- Login dropdown -->
         <div class="m-4">
             <div class="dropdown">
-                <a class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/login.jpg" height="50" width="50" /></a>
+                <a *ngIf="!loggedIn; else userProfile " class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/login.jpg" height="50" width="50" /></a>
+                <ng-template #userProfile>
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown"><img src="../../assets/loggedIn.png" height="50" width="50" /></a>
+                </ng-template>
                 <div class="dropdown-menu dropdown-menu-end">
                     <button *ngIf="loggedIn;" class="dropdown-item" [routerLink]="['/profile']">My profile</button>
                     <button *ngIf="!loggedIn;" class="dropdown-item" [routerLink]="['/login']">Log in</button>

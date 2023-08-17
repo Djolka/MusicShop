@@ -13,5 +13,6 @@ router.delete('/users', controller.deleteAllUsers)
 router.delete('/users/:id', controller.deleteUserById)
 
 router.get('/user/:id', controller.getUserById);
+router.get('/userByEmail/:email', controller.findUserByEmail )
 
 module.exports = router;

@@ -3,6 +3,7 @@ import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 import { FavouritesService } from '../services/favourites.service';
+import Swal  from 'sweetalert2';
 
 @Component({
 	selector: 'app-navigation',
@@ -28,6 +29,11 @@ export class NavigationComponent implements OnInit{
 	public logout() {
 		this.loggedIn = false
 		this.userService.logOut()
+		Swal.fire(
+			'You have logged out',
+			'Log in if you want to buy products or save your favourites',
+			'success'
+		)
 		this.router.navigate(['/'])
 	}
 
@@ -50,4 +56,5 @@ export class NavigationComponent implements OnInit{
 			this.favSize = size
 		}) 
 	}
+
 }

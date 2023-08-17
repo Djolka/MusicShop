@@ -203,3 +203,8 @@ ul {
     align-items: center;
     justify-content: center;
 }
+
+.form-label::after {
+    content: ' *';
+    color: red;
+}

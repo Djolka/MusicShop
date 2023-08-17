@@ -46,7 +46,7 @@ module.exports.userOrders = async function (req, res, next) {
     const userId = req.params.id;
 
     try {
-        const orders = await Order.find({customerId: userId}).exec();
+        const orders = await Order.find({customerId: userId}).populate('products').exec();
         if (!orders) {
             return res
                 .status(404)

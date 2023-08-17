@@ -33,16 +33,26 @@ export class UserSignupComponent implements OnInit{
 
 	public submitForm(data: any) {
 		this.userService.addUser(data)
-		  	.subscribe((user: User) => {
-				Swal.fire(
-					'Welcome ' + user.name,
-					'We are happy to see you :)!',
-					'success'
-				  )
-				this.checkoutForm.reset()
-				this.userService.addUserLocalStorage(user)
-				this.loggedIn = true
-				this.router.navigate(['/'])
+		  	.subscribe({
+				next: (user: User) => {
+					console.log(user)
+					Swal.fire(
+						'Welcome ' + user.name,
+						'We are happy to see you :)!',
+						'success'
+					  )
+					this.checkoutForm.reset()
+					this.userService.addUserLocalStorage(user)
+					this.loggedIn = true
+					this.router.navigate(['/'])
+				},
+				error: (err) => {
+					Swal.fire(
+						'Email already in use',
+						'Please try again with new email address',
+						'success'
+					  )
+				},
 		  	})
 	}
 }

@@ -3,6 +3,7 @@ import { OrderService } from '../services/order.service';
 import { Order } from '../models/order.model';
 import { UserService } from '../services/user.service';
 import { format } from 'date-fns';
+import { Product } from '../models/product.model';
 
 @Component({
 	selector: 'app-order',
@@ -12,6 +13,9 @@ import { format } from 'date-fns';
 export class OrderComponent implements OnInit {
 
 	public ordersList: Order[] = []
+	public displayItems: Product[] = []
+	public totalPrice: number
+	public selectedOrder: Order
 
 	constructor (private orderService: OrderService,
 				 private userService: UserService) {
@@ -22,5 +26,17 @@ export class OrderComponent implements OnInit {
 		this.orderService.getOrdersByCustomerID(this.userService.get_id()).subscribe(list => {
 			this.ordersList = list
 		})
+	}
+
+	public showOrder(order: Order) {
+		this.displayItems = []
+		
+		this.displayItems = order.products
+		this.totalPrice = order.totalPrice
+		console.log(this.displayItems)
+		console.log(this.totalPrice)
+		this.selectedOrder = order;
+		console.log(this.selectedOrder)
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 }

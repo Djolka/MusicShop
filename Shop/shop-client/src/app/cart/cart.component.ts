@@ -17,25 +17,26 @@ export class CartComponent {
 	public user: User = new User()
 	public items: Product[] = []
 	public totalPrice:number = 0
-	public checkoutForm: FormGroup
+	public phoneNumber: string
+	public address: string 
+	public country: string 
 
 	constructor (private cartService: CartService,
 				 private userService: UserService,
 				 private orderService: OrderService,
 				 private formBuilder: FormBuilder) {
 		this.refreshUser()
+		
 		this.items = this.cartService.getitems()
 		this.totalPrice = this.cartService.getTotalPrice()
-		this.checkoutForm = this.formBuilder.group({
-			phoneNumber: [this.user.phoneNumber, [Validators.required]],
-			address: [this.user.address, [Validators.required]],
-			country: [this.user.country, [Validators.required]]
-		})
 	}
 
 	refreshUser() {
 		this.userService.getUserById().subscribe((user:User) => {
 			this.user = user
+			this.phoneNumber = user.phoneNumber
+			this.address =  user.address
+			this.country = user.country
 		})
 	}
 
@@ -52,6 +53,31 @@ export class CartComponent {
 	}
 
 	public addOrder() {
+		if(!this.phoneNumber) {
+			Swal.fire(
+				'Please enter your phone number',
+				'',
+				'warning'
+			)
+			return
+		}
+		if(!this.address) {
+			Swal.fire(
+				'Please enter your address',
+				'',
+				'info'
+			)
+			return
+		}
+		if(!this.country) {
+			Swal.fire(
+				'Please enter your country',
+				'',
+				'info'
+			)
+			return
+		}
+
 		this.orderService.createAnOrder(this.totalPrice, this.items, this.userService.get_id()).subscribe(order => {
 			console.log(order)
 		})

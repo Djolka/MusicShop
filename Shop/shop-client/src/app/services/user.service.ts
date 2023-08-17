@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpErrorHandler } from './http-error-handler.model';
-import { Observable, catchError} from 'rxjs';
+import { Observable, catchError, of} from 'rxjs';
 import { User } from '../models/user.model'
 
 
@@ -39,7 +39,8 @@ export class UserService extends HttpErrorHandler {
 		}
 		
 		this.user = this.http.post<User>(this.usersURL + 'signup/', body)
-					.pipe(catchError(super.handleError()))
+
+		console.log("cao")
 		
 		return this.user
 	}

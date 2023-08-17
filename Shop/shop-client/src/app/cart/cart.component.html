@@ -5,7 +5,7 @@
                 <div class="cart_container"> 
                     <div class="cart_title">Shopping Cart</div>
                     <div><small> {{ items.length }} item(s) in your cart </small></div>
-                    <div *ngFor="let item of items"   class="cart_items">
+                    <div *ngFor="let item of items" class="cart_items">
                         <ul class="cart_list">
                             <li class="cart_item clearfix">
                                 <div class="cart_item_image"><img src="{{ item.picture[0] }}" alt=""></div>
@@ -22,12 +22,6 @@
                                         <div class="cart_item_title">Price</div>
                                         <div class="cart_item_text">{{ item.price * item.quantity | currency: 'EUR'}}</div>
                                     </div>
-                                    <!-- <div class="cart_item_color cart_info_col mt-5">
-                                        <button type="button" (click)="removeItem(item._id)" class="btn btn-danger btn-sm rounded-pill py-1 px-2">REMOVE</button>
-                                    </div> -->
-                                    <!-- <button type="button" class="btn btn-lg" (click)="removeItem(item._id)">
-                                        <span>x</span>
-                                    </button> -->
                                     <div class="mt-5">
                                         <button (click)="removeItem(item._id)" class="btn custom-button">x</button>
                                     </div>
@@ -48,25 +42,23 @@
                     </div>
                 </div>
             </div>
-            <div class="text-black col-lg-5">
-                <form [formGroup]="checkoutForm" style="width: 23rem;margin-left: 200px;">
-                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Your informations:</h3>
-        
-                    <div class="form-outline mb-4">
-                        <label id="phoneNumber" class="form-label" for="phoneNumber">Phone number:</label>
-                        <input type="text" value="{{ user.phoneNumber }}" id="phoneNumber" class="form-control form-control-lg" formControlName="phoneNumber" placeholder=" phone number" />
-                    </div>
+            <div class="text-black col-lg-3" style="margin-left: 200px;" >
+                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Your informations:</h3>
+    
+                <div class="form-outline mb-4">
+                    <label id="phoneNumber" class="form-label" for="phoneNumber">Phone number:</label>
+                    <input type="text" [(ngModel)]="phoneNumber" id="phoneNumber" class="form-control form-control-lg" placeholder=" phone number" />
+                </div>
 
-                    <div class="form-outline mb-4">
-                        <label id="address" class="form-label" for="address">Address:</label>
-                        <input type="text" value="{{ user.address }}" id="address" class="form-control form-control-lg" formControlName="address" placeholder=" address" />
-                    </div>
+                <div class="form-outline mb-4">
+                    <label id="address" class="form-label" for="address">Address:</label>
+                    <input type="text" [(ngModel)]="address" id="address" class="form-control form-control-lg" placeholder=" address" />
+                </div>
 
-                    <div class="form-outline mb-4">
-                        <label id="country" class="form-label" for="country">Country:</label>
-                        <input type="text" value="{{ user.country }}" id="country" class="form-control form-control-lg" formControlName="country" placeholder=" country"/>
-                    </div>
-                </form>
+                <div class="form-outline mb-4">
+                    <label id="country" class="form-label" for="country">Country:</label>
+                    <input type="text" [(ngModel)]="country" id="country" class="form-control form-control-lg" placeholder=" country"/>
+                </div>
             </div>
         </div>
     </div>

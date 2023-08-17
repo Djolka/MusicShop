@@ -6,47 +6,46 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-user-login',
-  templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.css']
+	selector: 'app-user-login',
+	templateUrl: './user-login.component.html',
+	styleUrls: ['./user-login.component.css']
 })
-export class UserLoginComponent  implements OnInit {
+export class UserLoginComponent implements OnInit {
 
-    // private user: User
+	// private user: User
 	public checkoutForm: FormGroup
 
-	constructor (private userService: UserService,
-				 private formBuilder: FormBuilder,
-				 private router: Router) {
+	constructor(private userService: UserService,
+		private formBuilder: FormBuilder,
+		private router: Router) {
 		this.checkoutForm = this.formBuilder.group({
 			email: ['', [Validators.required, Validators.email]],
 			password: ['', [Validators.required]]
 		})
 	}
 
-	ngOnInit(): void {}
+	ngOnInit(): void { }
 
 	public submitForm(data: any) {
 		this.userService.getUserByEmailAndPassword(data)
-		  	.subscribe((user: User) => {
-				Swal.fire(
-					'Welcome back ' + user.name,
-					'We are happy to see you :)!',
-					'success'
-				)
-				this.checkoutForm.reset()
-				this.userService.addUserLocalStorage(user)
-				this.router.navigate(['/'])
-		  	},
-			  (error: any) => {
-				if(error.status === 404) {
+			.subscribe({
+				next: (user: User) => {
+					Swal.fire(
+						'Welcome ' + user.name,
+						'We are happy to see you :)!',
+						'success'
+					)
+					this.checkoutForm.reset()
+					this.userService.addUserLocalStorage(user)
+					this.router.navigate(['/'])
+				},
+				error: (err) => {
 					Swal.fire(
 						'Error',
 						'Invalid email or password. Please try again.',
 						'error'
-					);
-				}		
-			  }
-			)
+					)
+				},
+			})
 	}
 }
