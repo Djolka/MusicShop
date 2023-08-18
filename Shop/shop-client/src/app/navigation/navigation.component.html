@@ -32,11 +32,12 @@
         <!-- Right elements -->
         <!-- Collapsible wrapper -->
         <div class="d-flex input-group w-auto">
-            <input id="searchbar" onsearch="search()" onkeyup="search()" type="search" name="search" class="form-control rounded" placeholder="Search">
-            
-            <ul id="list-holder">
-            </ul>
+            <div id="myDropdown" class="dropdown-content">
+                <input id="searchbar" [(ngModel)]="searchFilter" (keyup)="filterFunction()" type="search" name="search" class="form-control rounded" placeholder="Search">
+                <a (click)="getToItem(item._id)" *ngFor="let item of filteredItems">{{ item.name }}</a> <!-- [routerLink]="['/product/', item._id]"-->
+            </div>
         </div>
+
         <!-- Favorites icon -->
         <div *ngIf="loggedIn" class="d-flex align-items-center">
             <input *ngIf="favSize===0;else notEmptyFav" [routerLink]="['/favourites']" type="image"

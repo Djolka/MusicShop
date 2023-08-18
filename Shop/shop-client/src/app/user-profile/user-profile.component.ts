@@ -8,9 +8,9 @@ import { countries } from "countries-list";
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+	selector: 'app-user-profile',
+	templateUrl: './user-profile.component.html',
+	styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent {
 
@@ -19,8 +19,8 @@ export class UserProfileComponent {
 	subscription: Subscription
 
 	constructor(private userService: UserService,
-				private formBuilder: FormBuilder,
-				private router: Router) {
+		private formBuilder: FormBuilder,
+		private router: Router) {
 		this.refreshUser()
 		this.checkoutForm = this.formBuilder.group({
 			name: [this.user.name, [Validators.required]],
@@ -31,10 +31,10 @@ export class UserProfileComponent {
 			phoneNumber: [this.user.phoneNumber, []],
 			address: [this.user.address, []]
 		})
-  	}
+	}
 
 	refreshUser() {
-		this.userService.getUserById().subscribe((user:User) => {
+		this.userService.getUserById().subscribe((user: User) => {
 			this.user = user
 		})
 	}
@@ -51,4 +51,22 @@ export class UserProfileComponent {
 			})
 		this.router.navigate(['/'])
 	}
+
+	// public onFileChange(event: any) {
+	// 	if (event.target.files.length > 0) {
+	// 		const file = event.target.files[0];
+	// 		let fileName = this.user._id
+	// 		let fileType = file.type;
+	// 		if (fileType == 'image/png' || fileType == 'image/jpeg' || fileType == 'image/PNG' || fileType == 'image/JPEG') {
+	// 			const formData = new FormData();
+	// 			formData.append('photo', file);
+	// 			this.userService.updateProfilePicture(formData).subscribe(res => {
+	// 				console.log('Upload successful');
+	// 			});
+	// 		} else {
+	// 			console.log('Error!');
+	// 		}
+	// 	}
+
+	// }
 }

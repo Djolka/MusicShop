@@ -33,7 +33,9 @@ body {
 }
 
 .labels {
-    font-size: 11px
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .add-experience:hover {

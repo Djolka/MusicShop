@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 import { FavouritesService } from '../services/favourites.service';
 import Swal  from 'sweetalert2';
+import { Product } from '../models/product.model';
+import { ProductService } from '../services/product.service';
 
 @Component({
 	selector: 'app-navigation',
@@ -13,14 +15,21 @@ import Swal  from 'sweetalert2';
 
 export class NavigationComponent implements OnInit{
 
+	public items: Product[]
+	public filteredItems: Product[]
 	public loggedIn: boolean = false
 	public itemsSize: number = 0
 	public favSize: number = 0
+	public searchFilter: string = ""
 
 	constructor (private userService: UserService,
 				 private favouritesService: FavouritesService,
-				 private cartService: CartService,		 
+				 private cartService: CartService,
+				 private productService: ProductService,		 
 				 private router: Router) {
+		this.productService.getProducts().subscribe(items => {
+			this.items = items
+		})
 		if(this.userService.get_id() === undefined) {
 			this.loggedIn = true
 		}
@@ -57,4 +66,19 @@ export class NavigationComponent implements OnInit{
 		}) 
 	}
 
+	public filterFunction() {
+		if(this.searchFilter.trim() !== ""){
+  			this.filteredItems = this.items.filter(item => item.name.toLowerCase().includes(this.searchFilter.toLowerCase()));
+
+			return this.filteredItems
+		}
+		this.filteredItems = []
+		return this.filteredItems
+	}
+
+	public getToItem(id: any) {
+		this.searchFilter = ""
+		this.filterFunction()
+		this.router.navigate(['/product', id])
+	}
 }

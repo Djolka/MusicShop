@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../services/order.service';
 import { Order } from '../models/order.model';
 import { UserService } from '../services/user.service';
-import { format } from 'date-fns';
 import { Product } from '../models/product.model';
 
 @Component({

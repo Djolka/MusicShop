@@ -117,7 +117,7 @@
                         <option value="brandZA">Brands Z-A</option>
                     </select>
                     <hr width="50%"/>
-                    <div *ngIf="(products | async).length === 0" class="d-flex justify-content-center" style="margin-top: 100px;">
+                    <div *ngIf="(products | async)?.length === 0" class="d-flex justify-content-center" style="margin-top: 100px;">
                         <h4>No products</h4>
                     </div>
                     <div *ngFor="let product of products | async" class="col-lg-3 mb-3">

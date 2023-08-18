@@ -15,10 +15,10 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    // picture: {
-        // type: ... ,
-        // required: false,
-    // },
+    picture: {
+        type: String,
+        required: false,
+    },
     address: {
         type: String,
         required: false

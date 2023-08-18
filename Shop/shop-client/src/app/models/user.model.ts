@@ -7,8 +7,5 @@ export class User {
     address: string;
     country: string;
     phoneNumber: string;
-    // picture: {
-    // type: ... ,
-    // required: false,
-    // },
+    picture: string;
 }
