@@ -24,6 +24,7 @@ module.exports.createAnOrder = async function (req, res, next) {
         totalPrice: req.body.totalPrice,
         date: req.body.date
     });
+
     try {
         const savedObject = await order.save();
         res.status(201).json(savedObject);

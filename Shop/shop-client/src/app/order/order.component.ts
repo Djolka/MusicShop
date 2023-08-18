@@ -33,10 +33,8 @@ export class OrderComponent implements OnInit {
 		
 		this.displayItems = order.products
 		this.totalPrice = order.totalPrice
-		console.log(this.displayItems)
-		console.log(this.totalPrice)
 		this.selectedOrder = order;
-		console.log(this.selectedOrder)
+		
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 }

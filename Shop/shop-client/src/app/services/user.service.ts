@@ -39,8 +39,6 @@ export class UserService extends HttpErrorHandler {
 		}
 		
 		this.user = this.http.post<User>(this.usersURL + 'signup/', body)
-
-		console.log("cao")
 		
 		return this.user
 	}

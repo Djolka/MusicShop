@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Product } from '../models/product.model';
 import { Observable, map } from 'rxjs';
+import { Filter } from '../models/filter.model';
 
 @Component({
 	selector: 'app-home',
@@ -9,10 +10,30 @@ import { Observable, map } from 'rxjs';
 	styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
 	public products: Observable<Product[]>
+
+	public filterTags: Filter = new Filter() 
 
 	constructor(private productService: ProductService) {
 		this.products = this.productService.getProducts()
+	}
+
+
+	public applyFilter(id: keyof Filter, event: any) {
+		
+		if(event.target.checked === true) {
+			this.filterTags.changeValue(id, 1)
+			this.products = this.productService.filterProducts(this.filterTags)
+		} else {
+			this.filterTags.changeValue(id, 0)
+			this.products = this.productService.filterProducts(this.filterTags)
+		}
+
+		if(this.filterTags.areAllUnchecked()) {
+			this.products = this.productService.getProducts()
+			return
+		}
 	}
 
 	public onChange(event: any) {
