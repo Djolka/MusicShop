@@ -7,11 +7,6 @@ const orderSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    // products: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'Product',
-    //     required: true,
-    // }],
     products: [Product.schema],
     date: {
         type: Date,

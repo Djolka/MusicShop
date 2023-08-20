@@ -37,7 +37,7 @@ export class CartService extends HttpErrorHandler {
 		return this.items
 	}
 
-	public itemsLength(): number { // in navigation
+	public itemsLength(): number { 
 		return this.items.length
 	}
 

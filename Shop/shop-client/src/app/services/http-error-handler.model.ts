@@ -11,7 +11,6 @@ export abstract class HttpErrorHandler {
             if (err.error instanceof ErrorEvent) {
                 console.log('An error occured: ',  err.error.message)
             } else { 
-                //http://localhost:4200/error;message=...;statusCode=...
                 this.router.navigate(['/error', { message: err.message, statusCode: err.status}])
             }
             return throwError('Something bad happend; please try again later')

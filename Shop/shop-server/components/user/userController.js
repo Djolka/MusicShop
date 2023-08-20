@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
-const multer = require('multer')
 
 const User = require('./userModel')
 
@@ -97,7 +96,6 @@ module.exports.updateUser = async function (req, res, next) {
     }
 };
 
-//za proveru
 module.exports.getUserById = async function (req, res, next) {
     const userId = req.params.id;
 
@@ -130,6 +128,3 @@ module.exports.findUserByEmail = async function (req, res, next) {
         next(err);
     }
 };
-
-// module.exports.updatePicture = async function (req, res, next) {
-// }

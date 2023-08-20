@@ -41,7 +41,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Routing rules
+// Routing
 app.use('/users', userRoutes);
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
@@ -56,7 +56,6 @@ app.use(function (req, res, next) {
     next(error);
 });
 
-// Error handling
 app.use(function (error, req, res, next) {
     const statusCode = error.status || 500;
     res.status(statusCode).json({
@@ -68,5 +67,4 @@ app.use(function (error, req, res, next) {
     });
 });
 
-// Izvozenje Express.js aplikacije radi pokretanja servera
 module.exports = app;

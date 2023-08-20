@@ -68,9 +68,4 @@ export class UserService extends HttpErrorHandler {
 		localStorage.clear()
 		this.log.emit(false)
 	}
-
-	// public updateProfilePicture(formData: any) {
-	// 	return this.http.post(this.usersURL + 'updatePicture/' + this.get_id(), formData)
-	// }
-
 }

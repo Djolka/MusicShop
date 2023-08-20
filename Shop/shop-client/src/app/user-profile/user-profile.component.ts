@@ -51,22 +51,4 @@ export class UserProfileComponent {
 			})
 		this.router.navigate(['/'])
 	}
-
-	// public onFileChange(event: any) {
-	// 	if (event.target.files.length > 0) {
-	// 		const file = event.target.files[0];
-	// 		let fileName = this.user._id
-	// 		let fileType = file.type;
-	// 		if (fileType == 'image/png' || fileType == 'image/jpeg' || fileType == 'image/PNG' || fileType == 'image/JPEG') {
-	// 			const formData = new FormData();
-	// 			formData.append('photo', file);
-	// 			this.userService.updateProfilePicture(formData).subscribe(res => {
-	// 				console.log('Upload successful');
-	// 			});
-	// 		} else {
-	// 			console.log('Error!');
-	// 		}
-	// 	}
-
-	// }
 }

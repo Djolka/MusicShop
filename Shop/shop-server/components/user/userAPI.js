@@ -8,7 +8,6 @@ router.post('/login', controller.loginUser);
 router.post('/signup', controller.signUpUser);
 router.put('/update/:id', controller.updateUser)
 router.get('/users', controller.getUsers);
-// router.post('/updatePicture/:id', controller.updatePicture)
 
 router.delete('/users', controller.deleteAllUsers)
 router.delete('/users/:id', controller.deleteUserById)

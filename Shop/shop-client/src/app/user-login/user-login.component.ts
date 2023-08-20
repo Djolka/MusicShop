@@ -12,7 +12,6 @@ import Swal from 'sweetalert2';
 })
 export class UserLoginComponent implements OnInit {
 
-	// private user: User
 	public checkoutForm: FormGroup
 
 	constructor(private userService: UserService,
