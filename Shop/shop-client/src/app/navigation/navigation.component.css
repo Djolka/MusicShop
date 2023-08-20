@@ -19,6 +19,8 @@
 #title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
+    position: relative;
+    left: -500px;
 }
 
 .hover-button {
@@ -50,9 +52,11 @@
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    position:relative;;
+    position:absolute;
     background-color: #f6f6f6;
     width: 300px;
+    left: -300px;
+    top: -20px;
     max-height: 280px;
     overflow:hidden; 
     overflow-y:scroll;
