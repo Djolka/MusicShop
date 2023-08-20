@@ -284,5 +284,203 @@
         "countryOfOrigin": "China",
         "picture": ["../../assets/aNueNueUT5KETenorElectro-AcousticUkulele.jpg"],
         "quantity": 0
+    },
+    {
+        "name": "Rogue Lil' Kicker 3-Piece Junior Drum Set Black",
+        "price": 170,
+        "description": "The Rogue Lil' Kicker 3-Piece Drum set is a complete drum set especially designed for young drummers with a full-size passion for music. It's built to the same standards as full-size set with real multi-ply wood shells, fully tunable and replaceable top and bottom heads, and sleek chrome hardware and accents. The Lil' Kicker's “all-in-one” configuration comes complete with everything you need to start rockin' right out of the box — including bass drum, snare, tom, stands, cymbals, throne, bass drum pedal, tuning key and even a pair of sticks.",
+        "type": "acousticdrums",
+        "color": "Black",
+        "manufacturer": "Rogue",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/RogueLilKickerDrumSetBlack.jpg", "../../assets/RogueLilKickerDrumSetBlack1.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Sound Percussion Labs Unity II 5-Piece Complete Drum Set",
+        "price": 370,
+        "description": "The SPL D5522 Unity II 5-Piece drum set includes everything you need to start playing right away. The 6-ply poplar shells provide consistent tone and projection across the 22x16\" kick drum, 10x8\" and 12x9\" toms, 16x14\" floor tom and 14x5.5\" snare. Arch TechTM bearing edges allow for easy tuning and rounded tone. All-chrome hardware includes Unity II drum lugs for functionality and style. A full cymbal set, with hi-hat and crash, lets you explore a range of sounds. Remo batter heads come pre-installed for instant playability and lasting tone. Stands and a padded throne support your gear and keep you comfortable. Choose a finish to match your style: Black Onyx Glitter, Desert Red Speckle, Gold Metal Speckle or Pine Green Glitter. Backed by a one-year warranty.",
+        "type": "acousticdrums",
+        "color": "Black",
+        "manufacturer": "SPL",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/SoundPercussionLabs5-PieceCompleteDrumSet.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Hendrix Drums Perfect Ply Series Walnut 3-Piece Shell Pack, Fusion Sizes Satin",
+        "price": 1675,
+        "description": "Walnut drums are especially coveted by jazz and fusion drummers as a softer, punchier wood with deep tone, and Hendrix Drums has met that demand with this Perfect Ply walnut 3-piece shell pack. Crafted from 4 plies of genuine black walnut wood, these 5 mm thin rack tom, floor tom and kick drum shells deliver distinctive punchy sound that helps them sing at low volumes. Harder reinforcement rings keep the construction rigid enough for rock music as well, delivering a powerful tone when you lay into the drums with all you've got.",
+        "type": "acousticdrums",
+        "color": "Natural",
+        "manufacturer": "Hendrix",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/HendrixDrumsPerfect3-Piece.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Alesis Nitro Mesh Special-Edition 8-Piece Electronic Drum Set",
+        "price": 299,
+        "description": "The Alesis Nitro Mesh Special-Edition 8-piece electronic drum set redefines electronic percussion. This innovative set combines premium mesh drum heads, professional cymbals and advanced drum module technology for an unparalleled playing experience. With its ultraquiet mesh drum heads and low-noise cymbals, this electronic drum set is ideal for practice and performance in any location. Available at Guitar Center, this Nitro Mesh Special-Edition drum set is a premier choice for drummers wanting to perfect their craft in style.",
+        "type": "electronicdrums",
+        "color": "Black-Red",
+        "manufacturer": "Alesis",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/AlesisNitroMeshSpecial-Edition8-Piece.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Roland TD-07DMK V-Drums Electronic Drum Kit",
+        "price": 607,
+        "description": "The Roland TD-07DMK V-Drums Electronic Drum Kit has an incredibly small footprint, making it the perfect home kit. The compact CY-5 crash and ride cymbals allow you to play with expression despite their small sizes, while the stand-mounted kick pad provides the same bass drum sound without taking up the extra space. While the pads are smaller, they provide an incredibly authentic stick feel due to the ultra-quiet, double-ply mesh heads. These heads also offer an almost silent response, ensuring you can play without disturbing the neighbours.",
+        "type": "electronicdrums",
+        "color": "Black",
+        "manufacturer": "Roland",
+        "countryOfOrigin": "Japan",
+        "picture": ["../../assets/RolandTD-07DMKV-DrumsElectronicDrumKit.jpg", "../../assets/RolandTD-07DMKV-DrumsElectronicDrumKit1.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "ASM Hydrasynth Explorer",
+        "price": 649,
+        "description": "The ASM Hydrasynth Explorer is a highly versatile and portable synthesizer designed for musicians and sound enthusiasts who crave boundless creative possibilities in a compact form factor. This synthesizer is an extension of the original Hydrasynth synthesizer, distilled into a more compact and travel-friendly package",
+        "type": "synthesizer",
+        "color": "Black",
+        "manufacturer": "ASM",
+        "countryOfOrigin": "Taiwan",
+        "picture": ["../../assets/ASMHydrasynthExplorer.jpg", "../../assets/ASMHydrasynthExplorer1.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Arturia MicroFreak",
+        "price": 295,
+        "description": "The MicroFreak offers rare and exciting oscillator models like Harmonic, Superwave and Karplus Strong. This offers musicians who love to discover completely new and unimagined possibilities. Both new beginners and experienced professionals are enthusiastic about the sounds. Although the MicroFreak beats a digital oscillator in its chest, another heart lives next to it. Since opposites attract each other, a nice sounding analog filter is installed here. The 12dB Oberheim SEM makes the MicroFreak scream or whisper!",
+        "type": "synthesizer",
+        "color": "Black",
+        "manufacturer": "Arturia",
+        "countryOfOrigin": "France",
+        "picture": ["../../assets/ArturiaMicroFreak.jpg", "../../assets/ArturiaMicroFreak1.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Roland System-8",
+        "price": 1439,
+        "description": "The Roland System-8 Synthesizer from the AIRA series can control up to three PLUG OUT synths. JUPITER-8 and JUNO-106 PLUG-OUTS are included in the delivery. It offers a huge range of powerful sounds and has three oscillators. Separate or combine the sounds of various synths, use the built-in vocoder, arpeggiator, CV / gate outputs and the polyphonic step sequencer to fully exploit the incredible possibilities of the SYSTEM-8.",
+        "type": "synthesizer",
+        "color": "Black",
+        "manufacturer": "Roland",
+        "countryOfOrigin": "Japan",
+        "picture": ["../../assets/RolandSystem-8.jpg", "../../assets/RolandSystem-81.png"],
+        "quantity": 0
+    },
+    {
+        "name": "Acoustic A20 20W Acoustic Guitar Amplifier Brown/Tan",
+        "price": 200,
+        "description": "The Acoustic A20 instrument amp is designed to provide authentic, pristine tone for both acoustic instruments and vocal accompaniment. It is the perfect compact solution for today's acoustic-electric musician. Two combo inputs with independent level controls allow for instrument or microphone connection and 20 watts of power drives the studio-monitor style speaker for amazing sound.",
+        "type": "acousticamp",
+        "color": "Brown",
+        "manufacturer": "Acoustic amplification",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/AcousticA2020WAcousticGuitarAmplifier.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "NUX Stageman AC 25 25W 2 Channel Modeling Rechargable Acoustic Amp",
+        "price": 219,
+        "description": "The NUX AC-25 is a compact acoustic amplifier with built-in rechargeable battery that can run four hours for busking, mobile performance and impromptu gigs. It equips a 6.5\" speaker, modeling preamps, reverb, Bluetooth audio streaming and a drum machine. You can tweak it through the Stageman app on the mobile phone. The dual channel configuration means you can plug a dynamic mic and your acoustic guitar. You can play playbacks via Bluetooth or auxiliary input.",
+        "type": "acousticamp",
+        "color": "Natural",
+        "manufacturer": "Nux acoustic",
+        "countryOfOrigin": "China",
+        "picture": ["../../assets/NUXStagemanAC25.jpg", "../../assets/NUXStagemanAC251.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Laney A-Fresco-2 60W 1x8\" Battery-Powered Acoustic Combo Amp",
+        "price": 669,
+        "description": "Designed and engineered in the U.K., the Laney A-Fresco-2 provides versatility, portability and reliability to all levels of acoustic players. An ultra-efficient, dual mono Class D power amplifier, plus a single 8” custom-designed dual-cone woofer, delivers articulate transparent acoustic sound with both punch and high-end clarity, just like your acoustic instrument.",
+        "type": "acousticamp",
+        "color": "Brown",
+        "manufacturer": "Laney",
+        "countryOfOrigin": "UK",
+        "picture": ["../../assets/LaneyA-Fresco-260W1x8.jpg", "../../assets/LaneyA-Fresco-260W1x81.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Fender Champion 20 Guitar Amplifier",
+        "price": 129,
+        "description": "The Fender Champion 20 Combo w/ Effects is a simple to use yet powerfully voiced amplifier. Fantastic for a home practice or jamming sessions, you can develop your playing through the multiple pristine voicings offered by Fender. From crystal clear cleans to gravelly, crunchy overdrive, you'll be able to dive into any genre of your choosing.",
+        "type": "electricamp",
+        "color": "Black",
+        "manufacturer": "Fender",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/FenderChampion20GuitarAmplifier.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Marshall CODE 50 1x12 Combo",
+        "price": 249,
+        "description": "Fully programmable, the CODE series of Marshall amps combine the authentic modelling of classic and contemporary Marshall tones with industry standard grade FX. With the Code series, each amp is loaded with a wide variety of Marshalls most acclaimed and loved tones, with its MTS preamps producing a selection of classic tones developed through years of technological and creative development.",
+        "type": "electricamp",
+        "color": "Black",
+        "manufacturer": "Marshall",
+        "countryOfOrigin": "UK",
+        "picture": ["../../assets/MarshallCODE50Combo.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Ashdown ABM Ultra 115H-NEO 500W 1x15 Bass Speaker Cab",
+        "price": 749,
+        "description": "Fill the stage with deep, punchy bass tones with the Ashdown ABM-115H-NEO 500W 1x15” compact speaker cabinet. Built to last, the ABM-115HNEO is constructed using high-end birch plywood, rugged covering, metal corners and a steel grille.",
+        "type": "bassamp",
+        "color": "Black",
+        "manufacturer": "Ashdown ",
+        "countryOfOrigin": "UK",
+        "picture": ["../../assets/AshdownABMUltra115H-NEO.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Trace Elliot ELF 200W 1x8 Bass Combo Amp",
+        "price": 599,
+        "description": "There are many small bass amplifiers, but none that sound like their full-sized counterparts. For the tone of a big bass amp that you can carry in one hand, the Trace ELF Combos take the finest speaker components on the road in a portable package. These combos are purpose-built to amplify your skills and the tone of your instrument. It's the ultimate in tone and portability.",
+        "type": "bassamp",
+        "color": "Black",
+        "manufacturer": "Trace Elliot",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/TraceElliotELF200W.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Rode PodMic USB Dynamic Broadcast Microphone",
+        "price": 199,
+        "description": "Podcasters and content creators worldwide have relied on the RODE PodMic for clean, clear vocals. Sweetwater is proud to present its successor, the PodMic USB dynamic broadcast microphone, which ups the ante by building on the legacy of the PodMic and introducing a range of new features. First and foremost, USB-C and XLR outputs allow you to record straight into your computer or through a mixer or audio interface. ",
+        "type": "microphone",
+        "color": "Black",
+        "manufacturer": "Rode Microphones",
+        "countryOfOrigin": "Australia",
+        "picture": ["../../assets/RodePodMicUSBDynamicBroadcastMicrophone.jpg", "../../assets/RodePodMicUSBDynamicBroadcastMicrophone1.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "Shure SM58 Cardioid Dynamic Vocal Microphone (2-Pack)",
+        "price": 198,
+        "description": "If this is your first Shure SM58 dynamic microphone, then congratulations! You're about to discover why it's the most popular vocal microphone on the face of the planet. In fact, virtually every serious studio and live sound rig have several SM58s. Why? Because the Shure SM58 gives you three of the most important things a microphone can deliver: quality, consistency, and durability.",
+        "type": "microphone",
+        "color": "Black",
+        "manufacturer": "Shure",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/ShureSM58CardioidDynamicVocal.jpg"],
+        "quantity": 0
+    },
+    {
+        "name": "D'Addario NS Reflex Capo",
+        "price": 19,
+        "description": "The NS Reflex Capo assures buzz-free, in-tune performance at any fret. The patent-pending Side-Action geometry reduces the force required to open and close the capo, and applies even tension regardless of neck profile.",
+        "type": "capo",
+        "color": "black",
+        "manufacturer": "D'Addario",
+        "countryOfOrigin": "USA",
+        "picture": ["../../assets/D'AddarioReflexCapo.jpg", "../../assets/D'AddarioReflexCapo1.jpg", "../../assets/D'AddarioReflexCapo2.jpg"],
+        "quantity": 0
     }
 ]

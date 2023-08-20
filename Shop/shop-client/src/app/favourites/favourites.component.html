@@ -31,12 +31,24 @@
                                 </div>
                                 <div class="mb-2 text-muted small">
                                     <div [ngSwitch]="item.product.type">
-                                        <div *ngSwitchCase="'acoustic'">Acoustic guitar</div>
-                                        <div *ngSwitchCase="'electric'">Electric guitar</div>
-                                        <div *ngSwitchCase="'bass'">Bass guitar</div>
+                                        <div *ngSwitchCase="'acousticguitar'">Acoustic guitar</div>
+                                        <div *ngSwitchCase="'electricguitar'">Electric guitar</div>
+                                        <div *ngSwitchCase="'bassguitar'">Bass guitar</div>
+                                        <div *ngSwitchCase="'soprano'">Soprano ukulele</div>
+                                        <div *ngSwitchCase="'concert'">Concert ukulele</div>
+                                        <div *ngSwitchCase="'tenor'">Tenor ukulele</div>
+                                        <div *ngSwitchCase="'acousticdrums'">Acosutic drums</div>
+                                        <div *ngSwitchCase="'electronicdrums'">Electronic drums</div>
+                                        <div *ngSwitchCase="'synthesizer'">Synthesizer</div>
+                                        <div *ngSwitchCase="'acousticamp'">Acoustic amp</div>
+                                        <div *ngSwitchCase="'electricamp'">Electric amp</div>
+                                        <div *ngSwitchCase="'bassamp'">Bass amp</div>
+                                        <div *ngSwitchCase="'microphone'">Microphone</div>
+                                        <div *ngSwitchCase="'strings'">Strings</div>
+                                        <div *ngSwitchCase="'capo'">Capo</div>
                                     </div>
                                 </div>
-                                <p class="mb-4 mb-md-0">
+                                <p class="mb-4 mb-md-0 text-truncate">
                                     {{ item.product.description }}
                                 </p>
                             </div>

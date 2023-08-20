@@ -55,11 +55,10 @@
                 <li class="mb-1">
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
                         data-bs-target="#keys-collapse" aria-expanded="false">
-                        Keyboards/Pianos
+                        Keyboards
                     </button>
                     <div class="collapse" id="keys-collapse">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><input class="checkbox" type="checkbox" id="piano" (click)="applyFilter('piano', $event)"><label for="piano">Piano</label></li>
                             <li><input class="checkbox" type="checkbox" id="synthesizer" (click)="applyFilter('synthesizer', $event)"><label
                                     for="synthesizer">Synthesizer</label></li>
                         </ul>
@@ -92,7 +91,6 @@
                                     for="microphone">Microphone</label></li>
                             <li><input class="checkbox" type="checkbox" id="strings" (click)="applyFilter('strings', $event)"><label
                                     for="strings">Strings</label></li>
-                            <li><input class="checkbox" type="checkbox" id="pick" (click)="applyFilter('pick', $event)"><label for="pick">Pick</label></li>
                             <li><input class="checkbox" type="checkbox" id="capo" (click)="applyFilter('capo', $event)"><label for="capo">Capo</label></li>
                         </ul>
                     </div>
@@ -124,7 +122,7 @@
                         <div [routerLink]="['/product', product._id]" class="card  h-100">
                             <div style="cursor:pointer;" class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
                                 data-mdb-ripple-color="light">
-                                <img src="{{ product.picture }}" height="325" width="225px" class="w-100" />
+                                <img src="{{ product.picture[0] }}" height="325" width="225px" class="w-100" />
                                 <a>
                                     <div class="hover-overlay">
                                         <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
@@ -136,9 +134,21 @@
                                 <h5 class="card-title mb-3">{{ product.name }} </h5>
 
                                 <div [ngSwitch]="product.type">
-                                    <div *ngSwitchCase="'acoustic'">Acoustic guitar</div>
-                                    <div *ngSwitchCase="'electric'">Electric guitar</div>
-                                    <div *ngSwitchCase="'bass'">Bass guitar</div>
+                                    <div *ngSwitchCase="'acousticguitar'">Acoustic guitar</div>
+                                    <div *ngSwitchCase="'electricguitar'">Electric guitar</div>
+                                    <div *ngSwitchCase="'bassguitar'">Bass guitar</div>
+                                    <div *ngSwitchCase="'soprano'">Soprano ukulele</div>
+                                    <div *ngSwitchCase="'concert'">Concert ukulele</div>
+                                    <div *ngSwitchCase="'tenor'">Tenor ukulele</div>
+                                    <div *ngSwitchCase="'acousticdrums'">Acosutic drums</div>
+                                    <div *ngSwitchCase="'electronicdrums'">Electronic drums</div>
+                                    <div *ngSwitchCase="'synthesizer'">Synthesizer</div>
+                                    <div *ngSwitchCase="'acousticamp'">Acoustic amp</div>
+                                    <div *ngSwitchCase="'electricamp'">Electric amp</div>
+                                    <div *ngSwitchCase="'bassamp'">Bass amp</div>
+                                    <div *ngSwitchCase="'microphone'">Microphone</div>
+                                    <div *ngSwitchCase="'strings'">Strings</div>
+                                    <div *ngSwitchCase="'capo'">Capo</div>
                                 </div>
 
                                 <h6 class="mb-3">{{ product.price | currency: 'EUR' }}</h6>
