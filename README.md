@@ -1,4 +1,4 @@
-# MusicShop
+# Music Shop
 
 Webshop for buying musical instruments using MEAN stack.
 
