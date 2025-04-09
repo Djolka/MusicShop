@@ -35,7 +35,7 @@ export class FavouritesComponent implements OnInit {
 	public removeFromFavList(productId: String) {
 		this.favouritesService.removeFromFavList(productId, this.userService.get_id()).subscribe(item => {
 			Swal.fire(
-				'You have successfully added item to your wishlist!',
+				'You have successfully removed item from your wishlist!',
 				'',
 				'success'
 			)
