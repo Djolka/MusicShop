@@ -19,4 +19,4 @@ Make sure you have MongoDB installed: [MongoDB](https://www.mongodb.com/try/down
 ## **Database import:**
 - Position yourself in _Shop/shop-server_
 - Run command: <br>
-`mongoimport --db PRODAVNICABP --collection products --file products.json`
+`mongoimport --db PRODAVNICABP --collection products --file products.json --jsonArray`
