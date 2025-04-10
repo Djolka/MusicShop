@@ -6,7 +6,7 @@
                 <div class="border rounded-4 mb-3 d-flex justify-content-center">
                     <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image"
                         href="{{ product.picture }}">
-                        <img style="width: 600px; height: 650px; margin: auto;" class="rounded-4 fit"
+                        <img *ngIf="product?.picture?.length > 0" style="width: 600px; height: 650px; margin: auto;" class="rounded-4 fit"
                             src="{{ product.picture[0] }}" />
                     </a>
                 </div>
