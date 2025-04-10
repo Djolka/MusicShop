@@ -21,18 +21,12 @@ export class HomeComponent {
 
 
 	public applyFilter(id: keyof Filter, event: any) {
-		
-		if(event.target.checked === true) {
-			this.filterTags.changeValue(id, 1)
-			this.products = this.productService.filterProducts(this.filterTags)
-		} else {
-			this.filterTags.changeValue(id, 0)
-			this.products = this.productService.filterProducts(this.filterTags)
-		}
+		this.filterTags.changeValue(id, event.target.checked ? 1 : 0);
 
-		if(this.filterTags.areAllUnchecked()) {
-			this.products = this.productService.getProducts()
-			return
+		if (this.filterTags.areAllUnchecked()) {
+			this.products = this.productService.getProducts();
+		} else {
+			this.products = this.productService.filterProducts(this.filterTags);
 		}
 	}
 
